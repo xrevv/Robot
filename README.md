@@ -3,7 +3,7 @@
 <!-- ABOUT THE PROJECT -->
 ## O projekcie
 Projekt realizowany w ramach przedmiotu Systemy Mikroprocesorowe na studiach inżynierskich.
-Ramię robota sterowane płytką Wemos D1 poprzez Bluetooth.
+Ramię robota sterowane płytką Wemos D1 mini poprzez Bluetooth.
 
 <!-- ACKNOWLEDGMENTS -->
 ## Podziękowania
