@@ -172,6 +172,7 @@ void moveServo(int whichServo, int PosServo)
     {
       servo[whichServo].write(i);
     }
+    servo[whichServo].write(servoPos[whichServo]);
   }
   else if (servoPos[whichServo] < servoPPos[whichServo])
   {
@@ -179,6 +180,7 @@ void moveServo(int whichServo, int PosServo)
     {
       servo[whichServo].write(i);
     }
+    servo[whichServo].write(servoPos[whichServo]);
   }
 
   servoPPos[whichServo] = servoPos[whichServo];
