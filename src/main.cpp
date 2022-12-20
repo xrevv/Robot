@@ -3,7 +3,6 @@
 #include <Servo.h>
 
 #define memory 50
-#define delayT 10 // Delay between moves
 
 const int servoNum = 6;
 
@@ -66,7 +65,7 @@ void setup()
   // Initializing BT
   Bluetooth.begin(38400);
   Bluetooth.setTimeout(1);
-  delay(delayT);
+  delay(100);
 }
 
 void loop()
@@ -155,29 +154,30 @@ void loop()
   }
 }
 
+// TODO
 void moveServo(int whichServo, int PosServo)
 {
   servoPos[whichServo] = PosServo;
 
+  int offset = 2;
+
   if (whichServo <= 2)
   {
-    servo[whichServo].write(servoPos[whichServo]);
+    offset = 30;
   }
-  else
+
+  if (servoPos[whichServo] > servoPPos[whichServo])
   {
-    if (servoPos[whichServo] > servoPPos[whichServo])
+    for (int i = servoPPos[whichServo]; i <= servoPos[whichServo]; i += offset)
     {
-      for (int i = servoPPos[whichServo]; i <= servoPos[whichServo]; i++)
-      {
-        servo[whichServo].write(i);
-      }
+      servo[whichServo].write(i);
     }
-    else if (servoPos[whichServo] < servoPPos[whichServo])
+  }
+  else if (servoPos[whichServo] < servoPPos[whichServo])
+  {
+    for (int i = servoPPos[whichServo]; i >= servoPos[whichServo]; i -= offset)
     {
-      for (int i = servoPPos[whichServo]; i >= servoPos[whichServo]; i--)
-      {
-        servo[whichServo].write(i);
-      }
+      servo[whichServo].write(i);
     }
   }
 
