@@ -1,11 +1,13 @@
-\documentclass[11pt,titlepage]{article}
-
+\documentclass[11pt,titlepage,a4paper]{article}
 \usepackage{setspace}
+
+\usepackage[style=american]{csquotes}
 
 \usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
 \addbibresource{bib.bib}
 
 \usepackage{fancyhdr}
+\setlength{\headheight}{14pt}
 \pagestyle{fancy}
 
 \lhead{}
@@ -14,16 +16,6 @@
 \lfoot{}
 \cfoot{}
 \rfoot{str. \thepage}
-
-\usepackage{geometry}
-\geometry{
-    a4paper,
-    total={210mm,297mm},
-    left=20mm,
-    right=20mm,
-    top=20mm,
-    bottom=20mm,
-}
 
 % Polski
 \usepackage[]{polski} 
@@ -48,6 +40,8 @@
     linkcolor=black,
     urlcolor=black
 }
+
+\hbadness = 1
 
 \title{
 \includegraphics[scale=0.75]{img/politechnika_sl_logo_bw_poziom_pl.eps}\\
@@ -74,21 +68,17 @@ Kierujący pracą: dr inż. Jacek Loska}
 
 \newpage
 
-\section{\textcolor{orange}{TODO} Wstęp}
+\section{\textcolor{red}{NOT FINAL} Wstęp}
 
-Ispiracaja\cite*{HTM_YT}
+Podczas studiowania na kierunku Automatyka i Robotyka można zauważyć zadziwiający brak fizycznych pomocy naukowych. Ten projekt ma na celu poprawę tej sytuacji choćby w niewielkim stopniu. W tym celu zaproponowano stworzenie ramienia robota (manipulatora). Ma on na celu pomoc studentom z wizualizacją koncepcji teoretycznych w prawdziwym święcie, a nie tylko w książkach, czy na ekranie komputera.
 
-We wstępie należy umieścić krótką charakterystykę projektu oraz przedstawić do czego projekt ma służyć i jego ogólne założenia. Jest to opis ogólny wprowadzenie w tematykę projektu, funkcjonalny, bez wdawania się w szczegóły techniczne.
+Projekt może posłużyć także do zachęcenia potencjalnych studentów podczas na przykład dni otwartych, czy wycieczek szkolnych.
 
-Ta część powinna zwierać od ok. 1 strony.
+Główną inspiracją projektu był film zamieszczony na platformie YouTube z kanału \enquote{How To Mechatronics} pod tytułem \enquote{DIY Arduino Robot Arm with Smartphone Control} \cite*{HTM_YT}.
 
-Całość projektu piszemy w formie bezosobowej – ZAPROPONOWANO, ZROBIONO, WYKONANO itp.
+Nasz projekt korzysta z tych samych technologii, aczkolwiek wszystkie elementy (model 3D, oprogramowanie mikrokontrolelera, kod aplikacji, schemat połączeń itd.) zostały przygotowane przez nas.
 
-Każdy główny rozdział powinien rozpoczynać się od nowej strony (należy wstawić znak końca strony lub końca sekcji a nie wpisywać ciąg znaków końca linii).
-
-Poszczególne fragmenty tekstu powinny być grupowane w postaci akapitów – oznaczanych przez wcięcie albo przez odstęp między akapitami. Należy używać czcionki 11pkt i odstępu interlinii 1,5.
-
-Poziomów wcięcia w pracy powinno być maksymalnie 3.
+W ramach projektu stworzono dydaktyczny model 5 osiowego manipulatora z chwytakiem, zrealizowanego w technologii druku 3D, sterowany aplikacją na urządzenia z systemem Android.
 
 \subsection{\textcolor{orange}{TODO} Cel i zakres projektu}
 
