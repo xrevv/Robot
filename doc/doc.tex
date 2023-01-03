@@ -144,7 +144,13 @@ Przedstawić opis i założenia harmonogramu pracy z podziałem na dwie części
 
 \subsection{Harmonogram zatwierdzony}
 
-Podać dokładnie taki harmonogram jaki został zatwierdzony na początkowych zajęciach.
+\begin{enumerate}
+    \item Projektowanie modelu fizycznego robota oraz jego druk w technologii 3D.
+    \item Montaż mechaniczny oraz elektryczny.
+    \item Tworzenie oprogramowania na mikrokontroler.
+    \item Tworzenie aplikacji sterującej.
+    \item Projektowanie oraz realizacja komunikacji między mikrokontrolerem, \\a aplikacją sterującą.
+\end{enumerate}
 
 \subsection{Harmonogram wykonany}
 
@@ -152,12 +158,26 @@ Harmonogram powinien obejmować faktycznie zrealizowany program projektu. Powinn
 
 \section{Kosztorys}
 
-W tym rozdziale należy umieścić w tabeli wszystkie elementy z których składa się projekt wraz nazwą, producentem, ceną jednostkową, ich liczbą oraz kosztem. Musi być podany całkowity koszt projektu.
+\begin{center}
+    \begin{tabular}{|r|l|l|c|r|r|}
+        \hline
+        \multicolumn{6}{|c|}{Kosztorysu}                                            \\
+        \hline
+        Lp. & Typ                          & Producent & Ilość & Cena    & Wartość  \\
+        \hline
+        1.  & Mikrokontroler Wemos D1 mini & Wemos     & 1     & 9,48 zł & 9,48 zł  \\
+        2.  & Moduł Bluetooth HC-05        & SZYTF     & 1     & 9,40 zł & 9,40 zł  \\
+        3.  & Micro Servo 9g SG90          & HWAYEH    & 3     & 3,97 zł & 11,91 zł \\
+        4.  & Servo Mg996r                 & WAVGAT    & 3     & 12 zł   & 36 zł    \\
+        5.  & Obudowa ramienia (druk 3D)   & n/d       & 1     & 20 zł   & 20 zł    \\
+        6.  & Przewody                     & n/d       & n/d   & n/d     & 5 zł     \\
+        \hline
+        \multicolumn{6}{|r|}{Suma = 91,79 zł}                                       \\
+        \hline
+    \end{tabular}
+\end{center}
 
-Przykładowa tabela może wyglądać następująco
-
-Na końcu tabeli należy podać sumę elementów.
-Oraz ilość roboczogodzin poświęconych na projekt.
+\textcolor{red}{TODO: Ilość roboczogodzin poświęconych na projekt.}
 
 \section{Urządzenie wraz z aplikacją}
 
