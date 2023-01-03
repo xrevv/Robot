@@ -1,0 +1,216 @@
+\documentclass[11pt,titlepage]{article}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{}
+\chead{Ramię robota}
+\rhead{}
+\lfoot{}
+\cfoot{}
+\rfoot{str. \thepage}
+
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    total={210mm,297mm},
+    left=20mm,
+    right=20mm,
+    top=20mm,
+    bottom=20mm,
+}
+
+% Polski
+\usepackage[]{polski} 
+\usepackage[polish]{babel}
+
+% Pierwszy akapit - wcięty
+\usepackage[]{indentfirst}
+
+% Coś do matmy
+\usepackage[]{amsfonts}
+\usepackage[]{amsmath}
+
+
+% Coś z formatowania
+\usepackage{ragged2e}
+
+% Tytuły sekcji na środku
+% \usepackage{titlesec}
+% \titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+
+% <=
+\usepackage{amssymb}
+
+
+% eps
+\usepackage{graphicx}
+\usepackage{subfigure}
+
+\renewcommand*{\thesubsubsection}{}
+
+\usepackage[numbered]{matlab-prettifier}
+\lstset{
+    literate={ą}{{\k{a}}}1
+    {Ą}{{\k{A}}}1
+    {ę}{{\k{e}}}1
+    {Ę}{{\k{E}}}1
+    {ó}{{\'o}}1
+    {Ó}{{\'O}}1
+    {ś}{{\'s}}1
+    {Ś}{{\'S}}1
+    {ł}{{\l{}}}1
+    {Ł}{{\L{}}}1
+    {ż}{{\.z}}1
+    {Ż}{{\.Z}}1
+    {ź}{{\'z}}1
+    {Ź}{{\'Z}}1
+    {ć}{{\'c}}1
+    {Ć}{{\'C}}1
+    {ń}{{\'n}}1
+    {Ń}{{\'N}}1
+}
+
+% Dzielenie wyrazów
+% \tolerance=1
+% \emergencystretch=\maxdimen
+% \hyphenpenalty=10000
+% \hbadness=10000
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\title{
+\textbf{Politechnika Śląska w Gliwicach\\
+Wydział Automatyki, Elektroniki\\
+i Informatyki}\\
+\vspace*{1cm}
+Projekt z Systemów Mikroprocesorowych\\
+Ramię robota\\
+}
+
+\author{Mateusz Siedliski i Radosław Tchórzewski\\
+Kierujący pracą: dr inż. Jacek Loska} 
+\date{Gliwice 2022}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\newpage
+
+\section{Wstęp}
+
+We wstępie należy umieścić krótką charakterystykę projektu oraz przedstawić do czego projekt ma służyć i jego ogólne założenia. Jest to opis ogólny wprowadzenie w tematykę projektu, funkcjonalny, bez wdawania się w szczegóły techniczne.
+
+Ta część powinna zwierać od ok. 1 strony.
+
+Całość projektu piszemy w formie bezosobowej – ZAPROPONOWANO, ZROBIONO, WYKONANO itp.
+
+Każdy główny rozdział powinien rozpoczynać się od nowej strony (należy wstawić znak końca strony lub końca sekcji a nie wpisywać ciąg znaków końca linii).
+
+Poszczególne fragmenty tekstu powinny być grupowane w postaci akapitów – oznaczanych przez wcięcie albo przez odstęp między akapitami. Należy używać czcionki 11pkt i odstępu interlinii 1,5.
+
+Poziomów wcięcia w pracy powinno być maksymalnie 3.
+
+\subsection{Cel i zakres projektu}
+
+W tym punkcie opisać cel i zakres projektu oraz do czego jej wyniki mogą być wykorzystane. Określić ogólne wymagania sprzętowe i programowe potrzebne do realizacji projektu.
+
+Przykładowe etapy projektu który zostanie wykonany i opisany dalej, mogą być następujące:
+\begin{itemize}
+    \item Określenie problemu i wykonanie do niego założeń.
+    \item Analiza możliwych rozwiązań, wraz z kryteriami wyboru.
+    \item Wybór na postawie założonych kryteriów wraz z uzasadnieniem takiego a nie innego rozwiązania.
+    \item Wykonanie projektu zgodnie z wcześniejszymi założeniami.
+    \item Uruchomienie, weryfikacji i przetestowanie sprzętu i aplikacji.
+    \item Nakreślenie ewentualnych kierunków rozwoju projektu.
+    \item Wnioski końcowe.
+\end{itemize}
+
+Ta część powinna zwierać od 1 do 2 stron.
+
+\section{Harmonogram}
+
+Przedstawić opis i założenia harmonogramu pracy z podziałem na dwie części:
+
+\subsection{Harmonogram zatwierdzony}
+
+Podać dokładnie taki harmonogram jaki został zatwierdzony na początkowych zajęciach.
+
+\subsection{Harmonogram wykonany}
+
+Harmonogram powinien obejmować faktycznie zrealizowany program projektu. Powinny także być przedstawione powody jego ewentualnej modyfikacji wraz z uzasadnieniem.
+
+\section{Kosztorys}
+
+W tym rozdziale należy umieścić w tabeli wszystkie elementy z których składa się projekt wraz nazwą, producentem, ceną jednostkową, ich liczbą oraz kosztem. Musi być podany całkowity koszt projektu.
+
+Przykładowa tabela może wyglądać następująco
+
+Na końcu tabeli należy podać sumę elementów.
+Oraz ilość roboczogodzin poświęconych na projekt.
+
+\section{Urządzenie wraz z aplikacją}
+
+Należy podać krótki opis celu który chcemy osiągnąć wykonując projekt.
+Pozostałe punkty mają ułatwić napisanie projektu, ale nie są bezwzględnie wymagane. Powinno się je elastycznie dopasować do zrealizowanego projektu – SZCZEGÓLNIE nazwy podrozdziałów.
+Ta część powinna zwierać od 20 do 25 stron.
+
+\subsection{Określenie problemu}
+
+Dokładne opisanie problemu. Wykonać schematy ideowe i blokowe, dołączyć ilustrujące problem rysunki itp. Wykonać założenia potrzebne do rozwiązania postawionego problemu.
+
+Rysunek 1. To jest rysunek podstawowego bloku systemu.
+
+Należy zawsze odwoływać się do tego co jest na Rysunek 1.
+
+\subsection{Analiza rozwiązań}
+
+W tym punkcie powinno się przedstawić jakie są możliwości rozwiązania problemu (urządzenia, technologie i produkty), wraz z określeniem kryteriów wyboru rozwiązania.
+
+\subsection{Zaproponowane rozwiązanie}
+
+W tym punkcie należy przedstawić wybrane rozwiązanie problemu, wraz z uzasadnieniem wyboru na postawie kryteriów z poprzedniego punktu.
+
+\subsection{Wykonanie}
+
+W tym punkcie opisać jak zostało wykonane urządzenie oraz zaprogramowana aplikacja, jakie zastosowano technologie, narzędzia do pisania, weryfikowania i testowania aplikacji. Nie należy umieszczać kodu programu, jedynie wybrane fragmenty pokazujące rozwiązanie niestandardowego problemu. Pełny kod programu należy przesłać emailem ew. dodatkowo umieścić w załączniku.
+Jest to najważniejszy punkt w projekcie – proszę mu poświęcić jak najwięcej uwagi minimum 15-18 stron!!!
+
+\subsection{Problemy w trakcie tworzenia sprzętu i aplikacji (niepotrzebne usunąć!)}
+
+W tym punkcie należy przedstawić jakie były problemy przed którymi stanęli autorzy projektu w trakcie jego realizacji i jak je rozwiązali.
+
+\section{Podsumowanie}
+
+W ostatnim punkcie opisać co zostało wykonane, jakiej części założeń nie wykonano i dlaczego. Co można zrobić, by dany projekt poprawić i w jakim kierunku może pójść dalszy rozwój tego projektu.
+
+\section{Literatura}
+
+Zawsze jest wymagane stosowanie odwołań do źródeł. Jeżeli skądkolwiek zostały zaczerpnięte rysunki, teksty, schematy, część kodu programu należy to umieścić w spisie literatury, a w tekście wstawić odnośniki w formie nr odnośnka np. odnośnik 2 to odwołanie do technologii pisania tekstów!!!
+
+Nazwisko Imię, Tytuł, Wydawnictwo, Rok wydania.
+
+Strona internetowa – Koniecznie podać datę dostępu.
+
+\section{Załączniki}
+
+Na prezentację (obronę) projektu trzeba przygotować prezentację w PowerPoint lub Prezi trwającą ok 12-15 minut Zwykle jest to ok. 20 slajdów. Te slajdy muszą zawierać tytuł projektu, autora, prowadzącego. Następnie plan prezentacji, najważniejsze osiągnięcia , podsumowanie. Slajdy muszą być czytelne, należy umieszczać rysunki i schematy, także nie powinno się na nich umieszczać zbyt dużo tekstu (tekst powinien mieć ok. 20-24pkt). W trakcie lub po prezentacji powinno się zademonstrować wykonany sprzęt i oprogramowanie. Można również zaprezentować w zamian tego film z działania urządzenia.
+
+Przykładowa zawartość załącznika:
+Kody źródłowe (z komentarzami!!!) na CD spakowane.
+Wysłane mailem zawartość projektu do prowadzącego.
+Prezentacja.
+Wszystkie opisy układów, programów, narzędzi stosowanych w projekcie itp.
+
+
+\end{document}
