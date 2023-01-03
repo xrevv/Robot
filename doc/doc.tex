@@ -1,5 +1,8 @@
 \documentclass[11pt,titlepage]{article}
 
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\addbibresource{bib.bib}
+
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 
@@ -108,6 +111,8 @@ Kierujący pracą: dr inż. Jacek Loska}
 \newpage
 
 \section{\textcolor{orange}{TODO} Wstęp}
+
+Ispiracaja\cite*{HTM_YT}
 
 We wstępie należy umieścić krótką charakterystykę projektu oraz przedstawić do czego projekt ma służyć i jego ogólne założenia. Jest to opis ogólny wprowadzenie w tematykę projektu, funkcjonalny, bez wdawania się w szczegóły techniczne.
 
@@ -220,13 +225,9 @@ W tym punkcie należy przedstawić jakie były problemy przed którymi stanęli 
 
 W ostatnim punkcie opisać co zostało wykonane, jakiej części założeń nie wykonano i dlaczego. Co można zrobić, by dany projekt poprawić i w jakim kierunku może pójść dalszy rozwój tego projektu.
 
-\section{\textcolor{orange}{TODO} Literatura}
+\section{\textcolor{red}{NOT FINAL}  Literatura}
 
-Zawsze jest wymagane stosowanie odwołań do źródeł. Jeżeli skądkolwiek zostały zaczerpnięte rysunki, teksty, schematy, część kodu programu należy to umieścić w spisie literatury, a w tekście wstawić odnośniki w formie nr odnośnka np. odnośnik 2 to odwołanie do technologii pisania tekstów!!!
-
-Nazwisko Imię, Tytuł, Wydawnictwo, Rok wydania.
-
-Strona internetowa – Koniecznie podać datę dostępu.
+\printbibliography[heading=none]
 
 \section{\textcolor{orange}{TODO} Załączniki}
 
