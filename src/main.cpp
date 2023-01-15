@@ -77,7 +77,8 @@ void loop()
 
   delay(1);                        // Wait for BT data
   dataIn = Bluetooth.readString(); // Receive BT data
-  if (dataIn.startsWith("s"))      // Servo position?
+
+  if (dataIn.startsWith("s")) // Servo position?
   {
     // Which servo?
     String dataInServo = dataIn.substring(1, 2);
@@ -100,6 +101,7 @@ void loop()
 
     case 1: // Save
 
+      // Save all current servo positions
       if (indexS < memory)
       {
         for (size_t i = 0; i < servoNum; i++)
@@ -117,12 +119,15 @@ void loop()
 
       for (int j = 0; j < indexS; j++)
       {
+
         dataIn = Bluetooth.readString(); // Receive BT data
-        if (dataIn.startsWith("c3"))
+        if (dataIn.startsWith("c3"))     // Stop?
         {
           break;
         }
-        while (checkPos(j))
+
+        // Move all servos simultaneously
+        while (checkPos(j)) // Check if all servos are in posiotion
         {
           for (size_t i = 0; i < servoNum; i++)
           {
@@ -138,6 +143,7 @@ void loop()
         }
       }
 
+      // Repeat until Stop command
       if (!dataIn.startsWith("c3"))
       {
         goto PLAY;
@@ -147,6 +153,7 @@ void loop()
 
     case 4: // Reset
 
+      // Fill memory with initial positions
       for (size_t i = 0; i < servoNum; i++)
       {
         for (size_t j = 0; j < memory; j++)
