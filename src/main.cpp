@@ -110,8 +110,15 @@ void loop()
 
       case 2: // Play
 
+      PLAY:
+
         for (int j = 0; j < indexS; j++)
         {
+          dataIn = Bluetooth.readString(); // Receive BT data
+          if (dataIn.startsWith("c3"))
+          {
+            break;
+          }
           while (checkPos(j))
           {
             for (size_t i = 0; i < servoNum; i++)
@@ -126,6 +133,11 @@ void loop()
               }
             }
           }
+        }
+
+        if (!dataIn.startsWith("c3"))
+        {
+          goto PLAY;
         }
 
         break;
@@ -154,7 +166,6 @@ void loop()
   }
 }
 
-// TODO
 void moveServo(int whichServo, int PosServo)
 {
   servoPos[whichServo] = PosServo;
