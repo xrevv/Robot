@@ -33,19 +33,12 @@ String dataIn = "";
 
 // Function prototypes
 void moveServo(int whichServo, int PosServo);
+void setMem();
 bool checkPos(int pos);
 
 void setup()
 {
-  // Setting initial positions
-  for (size_t j = 0; j < memory; j++)
-  {
-    for (size_t i = 0; i < servoNum; i++)
-    {
-      servoSPos[i][j] = servo01235InitPos;
-    }
-    servoSPos[4][j] = servo4InitPos;
-  }
+  setMem(); // Setting initial positions
 
   // Ataching servos
   servo[0].attach(D6);
@@ -153,22 +146,7 @@ void loop()
 
     case 4: // Reset
 
-      // Fill memory with initial positions
-      for (size_t i = 0; i < servoNum; i++)
-      {
-        for (size_t j = 0; j < memory; j++)
-        {
-          if (i != 4)
-          {
-            servoSPos[i][j] = servo01235InitPos;
-          }
-          else
-          {
-            servoSPos[i][j] = servo4InitPos;
-          }
-        }
-      }
-      indexS = 0;
+      setMem(); // Setting initial positions
 
       break;
     }
@@ -216,4 +194,18 @@ bool checkPos(int pos)
     }
   }
   return 0;
+}
+
+void setMem()
+{
+  // Setting initial positions
+  for (size_t j = 0; j < memory; j++)
+  {
+    for (size_t i = 0; i < servoNum; i++)
+    {
+      servoSPos[i][j] = servo01235InitPos;
+    }
+    servoSPos[4][j] = servo4InitPos;
+  }
+  indexS = 0;
 }
