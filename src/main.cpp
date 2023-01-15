@@ -157,6 +157,7 @@ void moveServo(int whichServo, int PosServo)
 {
   servoPos[whichServo] = PosServo;
 
+  // Movement speed adjustment
   int offset = 2;
 
   if (whichServo <= 2)
