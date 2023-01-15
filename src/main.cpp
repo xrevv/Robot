@@ -70,98 +70,100 @@ void setup()
 
 void loop()
 {
-  if (Bluetooth.available() > 0) // Check BT
+  while (Bluetooth.available() <= 0) // Check BT
   {
-    delay(1);                        // Wait for BT data
-    dataIn = Bluetooth.readString(); // Receive BT data
-    if (dataIn.startsWith("s"))      // Servo position?
+    // Nothing to do
+  }
+
+  delay(1);                        // Wait for BT data
+  dataIn = Bluetooth.readString(); // Receive BT data
+  if (dataIn.startsWith("s"))      // Servo position?
+  {
+    // Which servo?
+    String dataInServo = dataIn.substring(1, 2);
+    int SelectServo = dataInServo.toInt();
+
+    // Which position?
+    String dataInServoPos = dataIn.substring(2, dataIn.length());
+    int PosServo = dataInServoPos.toInt();
+
+    moveServo(SelectServo - 1, PosServo);
+  }
+  else if (dataIn.startsWith("c")) // Command?
+  {
+    // Which command?
+    String dataInFunc = dataIn.substring(1, 2);
+    int SelectFunc = dataInFunc.toInt();
+
+    switch (SelectFunc)
     {
-      // Which servo?
-      String dataInServo = dataIn.substring(1, 2);
-      int SelectServo = dataInServo.toInt();
 
-      // Which position?
-      String dataInServoPos = dataIn.substring(2, dataIn.length());
-      int PosServo = dataInServoPos.toInt();
+    case 1: // Save
 
-      moveServo(SelectServo - 1, PosServo);
-    }
-    else if (dataIn.startsWith("c")) // Command?
-    {
-      // Which command?
-      String dataInFunc = dataIn.substring(1, 2);
-      int SelectFunc = dataInFunc.toInt();
-
-      switch (SelectFunc)
+      if (indexS < memory)
       {
+        for (size_t i = 0; i < servoNum; i++)
+        {
+          servoSPos[i][indexS] = servoPos[i];
+        }
+        indexS++;
+      }
 
-      case 1: // Save
+      break;
 
-        if (indexS < memory)
+    case 2: // Play
+
+    PLAY:
+
+      for (int j = 0; j < indexS; j++)
+      {
+        dataIn = Bluetooth.readString(); // Receive BT data
+        if (dataIn.startsWith("c3"))
+        {
+          break;
+        }
+        while (checkPos(j))
         {
           for (size_t i = 0; i < servoNum; i++)
           {
-            servoSPos[i][indexS] = servoPos[i];
-          }
-          indexS++;
-        }
-
-        break;
-
-      case 2: // Play
-
-      PLAY:
-
-        for (int j = 0; j < indexS; j++)
-        {
-          dataIn = Bluetooth.readString(); // Receive BT data
-          if (dataIn.startsWith("c3"))
-          {
-            break;
-          }
-          while (checkPos(j))
-          {
-            for (size_t i = 0; i < servoNum; i++)
+            if (servoPos[i] > servoSPos[i][j])
             {
-              if (servoPos[i] > servoSPos[i][j])
-              {
-                servo[i].write(--servoPos[i]);
-              }
-              else if (servoPos[i] < servoSPos[i][j])
-              {
-                servo[i].write(++servoPos[i]);
-              }
+              servo[i].write(--servoPos[i]);
+            }
+            else if (servoPos[i] < servoSPos[i][j])
+            {
+              servo[i].write(++servoPos[i]);
             }
           }
         }
-
-        if (!dataIn.startsWith("c3"))
-        {
-          goto PLAY;
-        }
-
-        break;
-
-      case 4: // Reset
-
-        for (size_t i = 0; i < servoNum; i++)
-        {
-          for (size_t j = 0; j < memory; j++)
-          {
-            if (i != 4)
-            {
-              servoSPos[i][j] = servo01235InitPos;
-            }
-            else
-            {
-              servoSPos[i][j] = servo4InitPos;
-            }
-          }
-        }
-        indexS = 0;
-
-        break;
       }
+
+      if (!dataIn.startsWith("c3"))
+      {
+        goto PLAY;
+      }
+
+      break;
+
+    case 4: // Reset
+
+      for (size_t i = 0; i < servoNum; i++)
+      {
+        for (size_t j = 0; j < memory; j++)
+        {
+          if (i != 4)
+          {
+            servoSPos[i][j] = servo01235InitPos;
+          }
+          else
+          {
+            servoSPos[i][j] = servo4InitPos;
+          }
+        }
+      }
+      indexS = 0;
+
+      break;
     }
   }
 }
