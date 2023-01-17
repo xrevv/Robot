@@ -310,12 +310,83 @@ Ta propozycja spełnia wszystkie wymagania projektowe:
 
 \newpage
 
-\subsection{\textcolor{orange}{TODO} Wykonanie}
+\subsection{\textcolor{red}{WIP} Wykonanie}
 
-W tym punkcie opisać jak zostało wykonane urządzenie oraz zaprogramowana aplikacja, jakie zastosowano technologie, narzędzia do pisania, weryfikowania i testowania aplikacji. Nie należy umieszczać kodu programu, jedynie wybrane fragmenty pokazujące rozwiązanie niestandardowego problemu. Pełny kod programu należy przesłać emailem ew. dodatkowo umieścić w załączniku.
-Jest to najważniejszy punkt w projekcie – proszę mu poświęcić jak najwięcej uwagi minimum 15-18 stron!!!
+\subsubsection{\textcolor{blue}{DONE?} Wybór elementów}
 
-\subsection{\textcolor{orange}{TODO} Problemy w trakcie tworzenia sprzętu i aplikacji (niepotrzebne usunąć!)}
+Prace rozpoczęto od doboru elementów elektronicznych i mechanicznych oraz od wyboru procesu technologicznego wykonania manipulatora. Poniżej przedstawiono argumentację wyboru najważniejszych elementów.
+
+\medskip
+
+Elementy:
+\begin{itemize}
+    \item Mikrokontroler Wemos D1 mini
+    \item Moduł Bluetooth HC-05
+    \item HWAYEH Micro Servo 9g SG90
+    \item WAVGAT Servo Mg996r
+\end{itemize}
+wybrano ze względu na:
+\begin{itemize}
+    \item Niski koszt
+    \item Duża dostępność
+    \item Zaznajomienie autorów z elementem
+\end{itemize}
+
+\medskip
+
+Jako proces technologiczny wykorzystany do stworzenia korpusu urządzenia wybrano druk 3D ze względu na niski koszt i powszechną dostępność. Technologia ta również umożliwia optymalizację procesu twórczego poprzez wielokrotne iteracje.
+
+\newpage
+
+\subsubsection{\textcolor{blue}{DONE?} Model 3D}
+
+Następnym krokiem było zaprojektowanie modelu 3D manipulatora przy użyciu programu \href{https://www.autodesk.pl/products/fusion-360}{\underline{Autodesk Fusion 360}\footnote{Zintegrowane oprogramowanie CAD, CAM, CAE i PCB}}.
+
+Program Autodesk Fusion 360 to bardzo przystępna alternatywa dla środowiska Autodesk Inventor. Przy braku poprzedniego doświadczenia autorzy byli w stanie całkowicie od zera zaprojektować i zrealizować w pełni działający model manipulatora. Proces tworzenia korpusu pokazano na Rysunkach \ref{Modelowanie3Dleft} i \ref{Modelowanie3Dtop}\footnote{Wizualizacje stworzono w programie \href{https://www.blender.org}{\underline{Blender}}}, a gotowy model przedstawiono na Rysunku \ref{AutodeskViewer}.
+
+\begin{figure}[h!]
+    \begin{center}
+        \includegraphics[width=0.75\textwidth]{img/leftW.png}
+    \end{center}
+    \begin{center}
+        \includegraphics[width=0.75\textwidth]{img/leftC.png}
+    \end{center}
+    \caption{Proces tworzenia modelu 3D - Widok z boku}
+    \label{Modelowanie3Dleft}
+\end{figure}
+
+\begin{figure}[h!]
+    \vspace{3cm}
+    \begin{center}
+        \includegraphics[width=0.4\textwidth]{img/topW.png}
+        \includegraphics[width=0.4\textwidth]{img/topC.png}
+    \end{center}
+    \caption{Proces tworzenia modelu 3D - Widok z góry}
+    \label{Modelowanie3Dtop}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h!]
+    \vspace{1cm}
+    \begin{center}
+        \includegraphics[width=\textwidth]{img/Robak v25.f3d.png}
+    \end{center}
+    \vspace{1cm}
+    \caption{
+        Gotowy model w programie
+        \href{https://viewer.autodesk.com/}
+        {\underline{Autodesk Viewer}} \\ Narzędzie online do wyświetlania plików 2D i 3D}
+    \label{AutodeskViewer}
+\end{figure}
+
+\newpage
+
+\subsubsection{\textcolor{orange}{TODO} Schemat elektryczny}
+\subsubsection{\textcolor{orange}{TODO} Kod mikrokontrolera}
+\subsubsection{\textcolor{orange}{TODO} Kod aplikacji}
+
+\subsection{\textcolor{orange}{TODO} Problemy w trakcie tworzenia sprzętu i aplikacji}
 
 W tym punkcie należy przedstawić jakie były problemy przed którymi stanęli autorzy projektu w trakcie jego realizacji i jak je rozwiązali.
 
