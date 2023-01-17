@@ -66,6 +66,9 @@
     emphstyle=\bfseries\color{blue}%  style for emph={} 
 }
 
+% Macierze
+\usepackage{amsmath}
+
 \hbadness = 1
 
 \title{
@@ -204,17 +207,36 @@ Realizacja działającego prototypu zajęła zdecydowanie mniej czasu, niż pocz
 
 \newpage
 
-\section{\textcolor{blue}{DONE?} Urządzenie wraz z aplikacją}
+\section{\textcolor{red}{WIP} Urządzenie wraz z aplikacją}
 
 Tworząc ten projekt mamy na celu stworzenie przydatnej pomocy naukowej dla osób zainteresowanych tematem automatyki i robotyki, który pozwoli na łatwiejsze przyswojenie teorii oraz zobaczenie jej praktycznego zastosowania.
 
-\subsection{\textcolor{orange}{TODO} Określenie problemu}
+\subsection{\textcolor{blue}{DONE?} Określenie problemu}
 
-Dokładne opisanie problemu. Wykonać schematy ideowe i blokowe, dołączyć ilustrujące problem rysunki itp. Wykonać założenia potrzebne do rozwiązania postawionego problemu.
+Problemem większości studentów jest często brak motywacji do nauki związany z poczuciem braku sensu przerabianego materiału. Ten projekt ma na celu poprawić ten stan rzeczy.
+Brak wyobrażenia o realnym zastosowaniu zdobytej wiedzy utrudnia pracę. Studenci nie widzą połączenia teorii z praktyką, jak przedstawiono na Rysunku \ref{teoriaVSprakrtyka}.
 
-Rysunek 1. To jest rysunek podstawowego bloku systemu.
+Rozwiązanie? Stworzenie fizycznego modelu.
 
-Należy zawsze odwoływać się do tego co jest na Rysunek 1.
+\begin{figure}[h!]
+    $$\boldsymbol{A_i}=Rot(z,\theta_i)Trans(0,0,\lambda_i)Trans(l_i,0,0)Rot(x,\alpha_i)=$$
+    \\
+    $$=\begin{bmatrix}
+            C_i & -S_i C_{\alpha_i} & S_i S_{\alpha_i}  & l_i C_i   \\
+            S_i & C_i C_{\alpha_i}  & -C_i S_{\alpha_i} & l_i S_i   \\
+            0   & S_{\alpha_i}      & C_{\alpha_i}      & \lambda_i \\
+            0   & 0                 & 0                 & 1
+        \end{bmatrix}$$\cite{skryptPR}
+    \\
+    $$\Downarrow$$
+    $$\mathord{?}$$
+    $$\Downarrow$$
+    \begin{center}
+        \includegraphics[width=\textwidth]{img/top.jpg}
+    \end{center}
+    \caption{Połączenie teorii z praktyką}
+    \label{teoriaVSprakrtyka}
+\end{figure}
 
 \subsection{\textcolor{orange}{TODO} Analiza rozwiązań}
 
