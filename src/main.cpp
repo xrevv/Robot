@@ -108,38 +108,34 @@ void loop()
 
     case 2: // Play
 
-    PLAY:
-
-      for (int j = 0; j < indexS; j++)
+      // Repeat until Stop command
+      while (!dataIn.startsWith("c3"))
       {
-
-        dataIn = Bluetooth.readString(); // Receive BT data
-        if (dataIn.startsWith("c3"))     // Stop?
+        for (int j = 0; j < indexS; j++)
         {
-          break;
-        }
 
-        // Move all servos simultaneously
-        while (checkPos(j)) // Check if all servos are in posiotion
-        {
-          for (size_t i = 0; i < servoNum; i++)
+          dataIn = Bluetooth.readString(); // Receive BT data
+          if (dataIn.startsWith("c3"))     // Stop?
           {
-            if (servoPos[i] > servoSPos[i][j])
+            break;
+          }
+
+          // Move all servos simultaneously
+          while (checkPos(j)) // Check if all servos are in posiotion
+          {
+            for (size_t i = 0; i < servoNum; i++)
             {
-              servo[i].write(--servoPos[i]);
-            }
-            else if (servoPos[i] < servoSPos[i][j])
-            {
-              servo[i].write(++servoPos[i]);
+              if (servoPos[i] > servoSPos[i][j])
+              {
+                servo[i].write(--servoPos[i]);
+              }
+              else if (servoPos[i] < servoSPos[i][j])
+              {
+                servo[i].write(++servoPos[i]);
+              }
             }
           }
         }
-      }
-
-      // Repeat until Stop command
-      if (!dataIn.startsWith("c3"))
-      {
-        goto PLAY;
       }
 
       break;
