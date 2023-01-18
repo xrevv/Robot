@@ -1,7 +1,7 @@
 \documentclass[11pt,titlepage,a4paper]{article}
 \usepackage{setspace}
 
-\usepackage[style=american]{csquotes}
+\usepackage[style=czech]{csquotes}
 
 \usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
 \addbibresource{bib.bib}
@@ -68,6 +68,9 @@
 
 % Macierze
 \usepackage{amsmath}
+
+% Tabele
+\usepackage{array}
 
 \hbadness = 1
 
@@ -433,7 +436,52 @@ Aplikacja powstała w \href{https://appinventor.mit.edu}{\underline{MIT App Inve
     \label{FinalApp}
 \end{figure}
 
-\subsubsection{\textcolor{orange}{TODO} Protokół komunikacyjny}
+\subsubsection{\textcolor{blue}{DONE?} Protokół komunikacyjny}
+
+Komunikacja aplikacji mobilnej z mikrokontrolerem odbywa się poprzez protokół Bluetooth przy użyciu modułu HC-05. Każdy komunikat to odpowiednio sformatowany string. Komendy komunikacyjne przedstawiono w Tabeli \ref{Komunikacja}. Przykładowe komunikaty:
+\begin{itemize}
+    \item \enquote{s1128\textbackslash0} - ustawienie serwomechanizmu 1 na pozycję 128
+    \item \enquote{s564\textbackslash0} - ustawienie serwomechanizmu 5 na pozycję 64
+    \item \enquote{c1\textbackslash0} - zapisanie aktualnej pozycji serwomechanizmów w pamięci do późniejszego odtworzenia
+    \item \enquote{c4\textbackslash0} - wyczyszczenie zapisanej sekwencji ruchowej
+\end{itemize}
+
+\vspace{2cm}
+
+\begin{table}[h!]
+    \begin{center}
+        \begin{tabular}{|c|c|c|m{8cm}|}
+            \hline
+            Komenda & Numer & Wartość & Funkcja                                                                                   \\
+            \hline
+            s       & 1     & x       & Ustawienie serwomechanizmu na pozycję x                                                   \\
+            \hline
+            s       & 2     & x       & Ustawienie serwomechanizmu na pozycję x                                                   \\
+            \hline
+            s       & 3     & x       & Ustawienie serwomechanizmu na pozycję x                                                   \\
+            \hline
+            s       & 4     & x       & Ustawienie serwomechanizmu na pozycję x                                                   \\
+            \hline
+            s       & 5     & x       & Ustawienie serwomechanizmu na pozycję x                                                   \\
+            \hline
+            s       & 6     & x       & Ustawienie serwomechanizmu na pozycję x                                                   \\
+            \hline
+            c       & 1     & x       & Save - zapisanie aktualnej pozycji serwomechanizmów w pamięci do późniejszego odtworzenia \\
+            \hline
+            c       & 2     & x       & Play - odtworzanie zapisanej sekwencji ruchowej                                           \\
+            \hline
+            c       & 3     & x       & Stop - koniec odtwarzania zapisanej sekwencji ruchowej                                    \\
+            \hline
+            c       & 4     & x       & Reset - wyczyszczenie zapisanej sekwencji ruchowej                                        \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \caption{Komendy komunikacyjne}
+    \label{Komunikacja}
+\end{table}
+
+\newpage
+
 \subsubsection{\textcolor{orange}{TODO} Kod mikrokontrolera}
 
 \subsection{\textcolor{orange}{TODO} Problemy w trakcie tworzenia sprzętu i aplikacji}
