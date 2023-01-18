@@ -406,8 +406,12 @@ Na Rysunku \ref{SchematElektryczny}\footnote{Stworzono przy użyciu \href{https:
     \label{Breadboard}
 \end{figure}
 
-\subsubsection{\textcolor{orange}{TODO} Kod mikrokontrolera}
+\subsubsection{\textcolor{red}{WIP} Kod mikrokontrolera}
+
+
+
 \subsubsection{\textcolor{orange}{TODO} Kod aplikacji}
+\subsubsection{\textcolor{orange}{TODO} Protokół komunikacyjny}
 
 \subsection{\textcolor{orange}{TODO} Problemy w trakcie tworzenia sprzętu i aplikacji}
 
@@ -427,7 +431,7 @@ W ostatnim punkcie opisać co zostało wykonane, jakiej części założeń nie 
 
 \newpage
 
-\section{\textcolor{orange}{TODO} Załączniki}
+\section{\textcolor{red}{WIP} Załączniki}
 
 Na prezentację (obronę) projektu trzeba przygotować prezentację w PowerPoint lub Prezi trwającą ok 12-15 minut Zwykle jest to ok. 20 slajdów. Te slajdy muszą zawierać tytuł projektu, autora, prowadzącego. Następnie plan prezentacji, najważniejsze osiągnięcia , podsumowanie. Slajdy muszą być czytelne, należy umieszczać rysunki i schematy, także nie powinno się na nich umieszczać zbyt dużo tekstu (tekst powinien mieć ok. 20-24pkt). W trakcie lub po prezentacji powinno się zademonstrować wykonany sprzęt i oprogramowanie. Można również zaprezentować w zamian tego film z działania urządzenia.
 
@@ -439,58 +443,64 @@ Wszystkie opisy układów, programów, narzędzi stosowanych w projekcie itp.
 
 \newpage
 
-\section{Kod}
+\renewcommand*{\lstlistingname}{Załącznik}
+\renewcommand*{\figurename}{Załącznik}
+\setcounter{figure}{1}
 
-\subsection{Kod mikrokontrolera}
+\lstinputlisting[label={KodMikrokontrolera},caption={Kod mikrokontrolera}]{../src/main.cpp}
 
-\lstinputlisting[]{../src/main.cpp}
-
-\subsection{Kod aplikacji}
-
-\subsubsection{Bluetooth}
-
-\begin{center}
-    \includegraphics[width=0.8\textwidth]{img/app_src/bluetooth/BluetoothListBefore.png}
-    \includegraphics[width=0.8\textwidth]{img/app_src/bluetooth/BluetoothListAfter.png}
-    \includegraphics[width=0.8\textwidth]{img/app_src/bluetooth/BluetoothDisconnected.png}
-    \includegraphics[width=0.8\textwidth]{img/app_src/bluetooth/BluetoothClient.png}
-\end{center}
-
-\newpage
-
-\subsubsection{Przyciski}
-
-\begin{center}
-    \includegraphics[width=0.9\textwidth]{img/app_src/posButtons/bttnRotation.png}
-    \includegraphics[width=0.9\textwidth]{img/app_src/posButtons/bttnWaist.png}
-    \includegraphics[width=0.9\textwidth]{img/app_src/posButtons/bttnElbow.png}
-    \includegraphics[width=0.9\textwidth]{img/app_src/posButtons/bttnWristRoll.png}
-    \includegraphics[width=0.9\textwidth]{img/app_src/posButtons/bttnWristPitch.png}
-    \includegraphics[width=0.9\textwidth]{img/app_src/posButtons/bttnGrip.png}
-\end{center}
+\begin{figure}
+    \begin{center}
+        \includegraphics[width=0.8\textwidth]{img/app_src/bluetooth/BluetoothListBefore.png}
+        \includegraphics[width=0.8\textwidth]{img/app_src/bluetooth/BluetoothListAfter.png}
+        \includegraphics[width=0.8\textwidth]{img/app_src/bluetooth/BluetoothDisconnected.png}
+        \includegraphics[width=0.8\textwidth]{img/app_src/bluetooth/BluetoothClient.png}
+    \end{center}
+    \caption{Kod aplikacji - Bluetooth}
+    \label{AppBluetooth}
+\end{figure}
 
 \newpage
 
-\subsubsection{Slidery}
-
-\begin{center}
-    \includegraphics[width=0.9\textwidth]{img/app_src/sliders/slidRotation.png}
-    \includegraphics[width=0.9\textwidth]{img/app_src/sliders/slidWaist.png}
-    \includegraphics[width=0.9\textwidth]{img/app_src/sliders/slidElbow.png}
-    \includegraphics[width=0.9\textwidth]{img/app_src/sliders/slidWristRoll.png}
-    \includegraphics[width=0.9\textwidth]{img/app_src/sliders/slidWristPitch.png}
-    \includegraphics[width=0.9\textwidth]{img/app_src/sliders/slidGrip.png}
-\end{center}
+\begin{figure}
+    \begin{center}
+        \includegraphics[width=0.9\textwidth]{img/app_src/posButtons/bttnRotation.png}
+        \includegraphics[width=0.9\textwidth]{img/app_src/posButtons/bttnWaist.png}
+        \includegraphics[width=0.9\textwidth]{img/app_src/posButtons/bttnElbow.png}
+        \includegraphics[width=0.9\textwidth]{img/app_src/posButtons/bttnWristRoll.png}
+        \includegraphics[width=0.9\textwidth]{img/app_src/posButtons/bttnWristPitch.png}
+        \includegraphics[width=0.9\textwidth]{img/app_src/posButtons/bttnGrip.png}
+    \end{center}
+    \caption{Kod aplikacji - Przyciski}
+    \label{AppPrzyciski}
+\end{figure}
 
 \newpage
 
-\subsubsection{Komendy}
+\begin{figure}
+    \begin{center}
+        \includegraphics[width=0.9\textwidth]{img/app_src/sliders/slidRotation.png}
+        \includegraphics[width=0.9\textwidth]{img/app_src/sliders/slidWaist.png}
+        \includegraphics[width=0.9\textwidth]{img/app_src/sliders/slidElbow.png}
+        \includegraphics[width=0.9\textwidth]{img/app_src/sliders/slidWristRoll.png}
+        \includegraphics[width=0.9\textwidth]{img/app_src/sliders/slidWristPitch.png}
+        \includegraphics[width=0.9\textwidth]{img/app_src/sliders/slidGrip.png}
+    \end{center}
+    \caption{Kod aplikacji - Slidery}
+    \label{AppSlidery}
+\end{figure}
 
-\begin{center}
-    \includegraphics[width=0.8\textwidth]{img/app_src/commands/Save.png}
-    \includegraphics[width=0.8\textwidth]{img/app_src/commands/Play.png}
-    \includegraphics[width=0.8\textwidth]{img/app_src/commands/Stop.png}
-    \includegraphics[width=0.8\textwidth]{img/app_src/commands/Reset.png}
-\end{center}
+\newpage
+
+\begin{figure}
+    \begin{center}
+        \includegraphics[width=0.8\textwidth]{img/app_src/commands/Save.png}
+        \includegraphics[width=0.8\textwidth]{img/app_src/commands/Play.png}
+        \includegraphics[width=0.8\textwidth]{img/app_src/commands/Stop.png}
+        \includegraphics[width=0.8\textwidth]{img/app_src/commands/Reset.png}
+    \end{center}
+    \caption{Kod aplikacji - Komendy}
+    \label{AppKomendy}
+\end{figure}
 
 \end{document}
