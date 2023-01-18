@@ -75,6 +75,9 @@
 % svg
 \usepackage{svg}
 
+% PDF
+\usepackage{pdfpages}
+
 \hbadness = 1
 
 \title{
@@ -553,7 +556,7 @@ Wszystkie opisy układów, programów, narzędzi stosowanych w projekcie itp.
 
 \lstinputlisting[label={KodMikrokontrolera},caption={Kod mikrokontrolera}]{../src/main.cpp}
 
-\begin{figure}
+\begin{figure}[p]
     \begin{center}
         \includegraphics[width=0.8\textwidth]{img/app_src/bluetooth/BluetoothListBefore.png}
         \includegraphics[width=0.8\textwidth]{img/app_src/bluetooth/BluetoothListAfter.png}
@@ -566,7 +569,7 @@ Wszystkie opisy układów, programów, narzędzi stosowanych w projekcie itp.
 
 \newpage
 
-\begin{figure}
+\begin{figure}[p]
     \begin{center}
         \includegraphics[width=0.9\textwidth]{img/app_src/posButtons/bttnRotation.png}
         \includegraphics[width=0.9\textwidth]{img/app_src/posButtons/bttnWaist.png}
@@ -581,7 +584,7 @@ Wszystkie opisy układów, programów, narzędzi stosowanych w projekcie itp.
 
 \newpage
 
-\begin{figure}
+\begin{figure}[p]
     \begin{center}
         \includegraphics[width=0.9\textwidth]{img/app_src/sliders/slidRotation.png}
         \includegraphics[width=0.9\textwidth]{img/app_src/sliders/slidWaist.png}
@@ -596,7 +599,7 @@ Wszystkie opisy układów, programów, narzędzi stosowanych w projekcie itp.
 
 \newpage
 
-\begin{figure}
+\begin{figure}[p]
     \begin{center}
         \includegraphics[width=0.8\textwidth]{img/app_src/commands/Save.png}
         \includegraphics[width=0.8\textwidth]{img/app_src/commands/Play.png}
@@ -606,5 +609,26 @@ Wszystkie opisy układów, programów, narzędzi stosowanych w projekcie itp.
     \caption{Kod aplikacji - Komendy}
     \label{AppKomendy}
 \end{figure}
+
+% TODO
+
+% \clearpage
+
+% \includepdf[pages=-,fitpaper,pagecommand={\label{wemos}}]{datasheet/sch_d1_mini_v4.0.0.pdf}
+
+% \includepdf[pages=-,fitpaper,pagecommand={\section{HC-05 - datasheet}\label{HC05data}}]{datasheet/HC-05_datasheet.pdf}
+
+% \includepdf[pages=-,fitpaper,pagecommand={\section{HC-05 - AT}\label{HC05at}}]{datasheet/HC-05_ATcommands.pdf}
+
+% \includepdf[pages=1,scale=.8,pagecommand={\section{My header}\label{pdf:myfile}},linktodoc=true]{myfile.pdf}
+% \includepdf[pages=2-,scale=.8,pagecommand={},linktodoc=true]{myfile.pdf}
+
+% \newpage
+
+% \includepdf[pages=-,fitpaper]{datasheet/HC-05_datasheet.pdf}
+
+% \newpage
+
+% \includepdf[pages=-,fitpaper]{datasheet/HC-05_ATcommands.pdf}
 
 \end{document}
