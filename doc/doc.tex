@@ -72,6 +72,9 @@
 % Tabele
 \usepackage{array}
 
+% svg
+\usepackage{svg}
+
 \hbadness = 1
 
 \title{
@@ -410,7 +413,7 @@ Na Rysunku \ref{SchematElektryczny}\footnote{Stworzono przy użyciu \href{https:
 
 \subsubsection{\textcolor{blue}{DONE?} Aplikacja}
 
-Aplikacja powstała w \href{https://appinventor.mit.edu}{\underline{MIT App Inventor}}\footnote{Zintegrowane środowisko programistyczne do tworzenia aplikacji mobilnych} (Rysunki \ref{MITapp} i \ref{MITblocks}). Środowisko to oferuje prostotę w realizacji projektów. Nie wymaga żadnego doświadczenia od użytkownika. Programowanie odbywa się we własnym języku graficznym (duże podobieństwo do \href{https://scratch.mit.edu}{\underline{Scratch}}\footnote{Interpretowany wizualny język programowania}). Kod dostarczonej aplikacji pokazano na Załącznikach \ref{AppBluetooth}, \ref{AppPrzyciski}, \ref{AppSlidery} i \ref{AppKomendy}. Na Rysunku \ref{FinalApp} pokazano ostateczną szatę graficzną aplikacji.
+Aplikacja powstała w \href{https://appinventor.mit.edu}{\underline{MIT App Inventor}}\footnote{Zintegrowane środowisko programistyczne do tworzenia aplikacji mobilnych} (Rysunki \ref{MITapp} i \ref{MITblocks}). Środowisko to oferuje prostotę w realizacji projektów. Nie wymaga żadnego doświadczenia od użytkownika. Programowanie odbywa się we własnym języku graficznym (duże podobieństwo do \href{https://scratch.mit.edu}{\underline{Scratch}}\footnote{Interpretowany wizualny język programowania}). Kod dostarczonej aplikacji pokazano na Załącznikach \ref{AppBluetooth}, \ref{AppPrzyciski}, \ref{AppSlidery} i \ref{AppKomendy}. Na Rysunku \ref{FinalApp} przedstawiono ostateczną szatę graficzną aplikacji.
 
 \begin{figure}[h!]
     \begin{center}
@@ -476,13 +479,23 @@ Komunikacja aplikacji mobilnej z mikrokontrolerem odbywa się poprzez protokół
             \hline
         \end{tabular}
     \end{center}
-    \caption{Komendy komunikacyjne}
+    \caption{Protokół komunikacyjny}
     \label{Komunikacja}
 \end{table}
 
 \newpage
 
-\subsubsection{\textcolor{orange}{TODO} Kod mikrokontrolera}
+\subsubsection{\textcolor{blue}{DONE?} Kod mikrokontrolera}
+
+Kod sterujący działaniem mikrokontrolera powstał w \href{https://code.visualstudio.com}{\underline{Visual Studio Code}}\footnote{Darmowy edytor kodu źródłowego z kolorowaniem składni dla wielu języków, stworzony przez Microsoft o otwartym kodzie źródłowym} przy pomocy \href{https://platformio.org}{\underline{PlatformIO}}\footnote{\enquote{A user-friendly and extensible integrated development environment with a set of professional development instruments, providing modern and powerful features to speed up yet simplify the creation and delivery of embedded products}\cite{platformio}}. Schemat blokowy kodu przedstawiono na rysunku \ref{SBCode}\footnote{Schemat wykonano w programie \href{https://www.lucidchart.com}{\underline{Lucidchart}}}. Całość kodu źródłowego znajduje się w Załączniku \ref{KodMikrokontrolera}.
+
+\begin{figure}[h!]
+    \begin{center}
+        \includesvg[width=0.7\textwidth]{img/schematkodu.svg}
+    \end{center}
+    \caption{Schemat blokowy kodu}
+    \label{SBCode}
+\end{figure}
 
 \subsection{\textcolor{orange}{TODO} Problemy w trakcie tworzenia sprzętu i aplikacji}
 
