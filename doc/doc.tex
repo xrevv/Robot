@@ -46,7 +46,34 @@
 
 \usepackage{listings}
 \usepackage{xcolor}
-\lstset { %
+
+\lstset{language=TeX}
+\lstdefinestyle{MyLaTeXStyle} {
+    language=TeX,
+    morekeywords={begin,renewcommand,usepackage},
+    basicstyle=\footnotesize\ttfamily,
+    keywordstyle=\color{orange},
+    commentstyle=\color{darkgray},
+    breakatwhitespace=false,
+    breaklines=true,
+    extendedchars=true,
+    frame=single,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    numberstyle=\footnotesize\color{gray},
+    rulecolor=\color{black},
+    rulesepcolor=\color{blue},
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    stringstyle=\color{orange},
+    tabsize=2,
+    emphstyle=\bfseries\color{blue}%  style for emph={} 
+}
+
+\lstset{language=C++}
+\lstdefinestyle{MyC++Style} {
     language=C++,
     basicstyle=\footnotesize\ttfamily,
     breakatwhitespace=false,
@@ -539,7 +566,7 @@ W celu ograniczenia prêdkoœci poruszania siê ka¿dego z serwomechanizmów zastosow
 \vspace{1cm}
 
 \begin{figure}[h!]
-    \lstinputlisting[firstline=152,lastline=182]{../src/main.cpp}
+    \lstinputlisting[style=MyC++Style,firstline=152,lastline=182]{../src/main.cpp}
     \caption{void moveServo()}
     \label{void_moveServo}
 \end{figure}
@@ -551,7 +578,7 @@ Innym ciekawym rozwi¹zaniem jest realizacja odtwarzania zapisanej sekwencji ruch
 \vspace{1cm}
 
 \begin{figure}[h!]
-    \lstinputlisting[firstline=109,lastline=142]{../src/main.cpp}
+    \lstinputlisting[style=MyC++Style,firstline=109,lastline=142]{../src/main.cpp}
     \caption{case 2: - Play}
     \label{casePlay}
 \end{figure}
@@ -594,9 +621,9 @@ W ramach tworzenia projektu zosta³a wykorzystana kontrola wersji \href{https://g
 
 \newpage
 
-\subsubsection{\textcolor{red}{WIP} Dokumentacja}
+\subsubsection{\textcolor{blue}{DONE?} Dokumentacja}
 
-Dokumentacja zosta³a stworzona z wykorzystaniem \href{https://www.latex-project.org}{\underline{\LaTeX}}\footnote{Oprogramowanie do zautomatyzowanego sk³adu tekstu, a tak¿e zwi¹zany z nim jêzyk znaczników, s³u¿¹cy do formatowania dokumentów tekstowych i tekstowo-graficznych}\\(Rysunek \ref{latexvs}).
+Dokumentacja zosta³a stworzona z wykorzystaniem \href{https://www.latex-project.org}{\underline{\LaTeX}}\footnote{Oprogramowanie do zautomatyzowanego sk³adu tekstu, a tak¿e zwi¹zany z nim jêzyk znaczników, s³u¿¹cy do formatowania dokumentów tekstowych i tekstowo-graficznych}\\(Rysunek \ref{latexvs}). Ca³oœæ kodu Ÿród³owego znajduje siê w Za³¹czniku \ref{KodLaTeX}.
 
 \vspace{3cm}
 
@@ -610,15 +637,24 @@ Dokumentacja zosta³a stworzona z wykorzystaniem \href{https://www.latex-project.
 
 \newpage
 
-\subsection{\textcolor{orange}{TODO} Problemy w trakcie tworzenia sprzêtu i aplikacji}
+\subsection{\textcolor{blue}{DONE?} Problemy w trakcie tworzenia sprzêtu i aplikacji}
 
-W tym punkcie nale¿y przedstawiæ jakie by³y problemy przed którymi stanêli autorzy projektu w trakcie jego realizacji i jak je rozwi¹zali.
+Napotkane problemy podczas tworzenia warstwy sprzêtowej i aplikacji:
+\begin{itemize}
+    \item Zmieszczenie siê w narzuconym bud¿ecie
+    \item Dotrzymanie wymagañ czasowych
+    \item Niska dostêpnoœæ elementów elektronicznych spowodowana obecn¹ sytuacj¹ œwiatow¹
+    \item Brak dostêpnoœci œrub, wkrêtów i nakrêtek M3 w lokalnym sklepie
+    \item Tolerancje mechaniczne druku 3D - koniecznoœæ dalszej obróbki
+    \item Niska jakoœæ pocz¹tkowo zakupionej p³ytki prototypowej wymusi³a drobn¹ reorganizacjê projektu
+    \item Inicjalizacja modu³u HC-05 [\ref{HC05data}, \ref{HC05at}] poprzez komendy AT [\ref{HC05at}]
+    \item Tworzenie koñcowego raportu
+\end{itemize}
 
 \newpage
 
 \section{\textcolor{orange}{TODO} Podsumowanie}
 
-W ostatnim punkcie opisaæ co zosta³o wykonane, jakiej czêœci za³o¿eñ nie wykonano i dlaczego. Co mo¿na zrobiæ, by dany projekt poprawiæ i w jakim kierunku mo¿e pójœæ dalszy rozwój tego projektu.
 
 \newpage
 
@@ -642,9 +678,13 @@ Wszystkie opisy uk³adów, programów, narzêdzi stosowanych w projekcie itp.
 
 \renewcommand*{\lstlistingname}{Za³¹cznik}
 \renewcommand*{\figurename}{Za³¹cznik}
-\setcounter{figure}{1}
+\setcounter{figure}{2}
 
-\lstinputlisting[label={KodMikrokontrolera},caption={Kod mikrokontrolera}]{../src/main.cpp}
+\lstinputlisting[style=MyC++Style,label={KodMikrokontrolera},caption={Kod mikrokontrolera}]{../src/main.cpp}
+
+\newpage
+
+\lstinputlisting[style=MyLaTeXStyle,label={KodLaTeX},caption={Kod LaTeX}]{doc.tex}
 
 \begin{figure}[p]
     \begin{center}
