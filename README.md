@@ -11,7 +11,7 @@ Ramię robota sterowane płytką Wemos D1 mini poprzez aplikację stworzoną w M
 * [stability-badges](https://github.com/mkenney/software-guides/blob/master/STABILITY-BADGES.md#work-in-progress)
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[stability-wip]: https://img.shields.io/badge/stability-wip-lightgrey.svg
+[stability-wip]: https://img.shields.io/badge/stability-locked-00AA00.svg
 
 [VSCode-url]: https://code.visualstudio.com/
 [VSCode]:https://img.shields.io/badge/build%20with-VS%20Code-blue.svg?logo=visualstudiocode
