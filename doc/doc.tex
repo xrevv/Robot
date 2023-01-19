@@ -1,4 +1,7 @@
 \documentclass[11pt,titlepage,a4paper]{article}
+
+\usepackage[cp1250]{inputenc}
+
 \usepackage{setspace}
 
 \usepackage[style=czech]{csquotes}
@@ -11,7 +14,7 @@
 \pagestyle{fancy}
 
 \lhead{}
-\chead{Ramiƒô robota}
+\chead{RamiÍ robota}
 \rhead{}
 \lfoot{}
 \cfoot{}
@@ -21,7 +24,7 @@
 \usepackage[]{polski} 
 \usepackage[polish]{babel}
 
-% Pierwszy akapit - wciƒôty
+% Pierwszy akapit - wciÍty
 \usepackage[]{indentfirst}
 
 % eps
@@ -45,24 +48,24 @@
 \usepackage{xcolor}
 \lstset { %
     language=C++,
-    basicstyle=\footnotesize\ttfamily,       
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    commentstyle=\color{gray},    
-    extendedchars=true,              
-    frame=single,                    
-    keepspaces=true,                 
-    keywordstyle=\color{orange},       
-    numbers=left,                    
-    numbersep=5pt,                   
-    numberstyle=\footnotesize\color{gray}, 
-    rulecolor=\color{black},         
+    basicstyle=\footnotesize\ttfamily,
+    breakatwhitespace=false,
+    breaklines=true,
+    commentstyle=\color{gray},
+    extendedchars=true,
+    frame=single,
+    keepspaces=true,
+    keywordstyle=\color{orange},
+    numbers=left,
+    numbersep=5pt,
+    numberstyle=\footnotesize\color{gray},
+    rulecolor=\color{black},
     rulesepcolor=\color{blue},
-    showspaces=false,                
-    showstringspaces=false,          
-    showtabs=false,                  
-    stringstyle=\color{orange},    
-    tabsize=2,                       
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    stringstyle=\color{orange},
+    tabsize=2,
     emphstyle=\bfseries\color{blue}%  style for emph={} 
 }
 
@@ -83,15 +86,15 @@
 \title{
 \includegraphics[scale=0.75]{img/politechnika_sl_logo_bw_poziom_pl.eps}\\
 \textbf{
-Wydzia≈Ç Automatyki, Elektroniki i Informatyki}\\
+Wydzia≥ Automatyki, Elektroniki i Informatyki}\\
 \vspace*{1cm}
-Projekt z System√≥w Mikroprocesorowych\\
-Ramiƒô robota\\
+Projekt z SystemÛw Mikroprocesorowych\\
+RamiÍ robota\\
 }
-\author{Mateusz Siedliski i Rados≈Çaw Tch√≥rzewski\\
+\author{Mateusz Siedliski i Rados≥aw TchÛrzewski\\
 Rok akademicki 2022/2023, semestr 5, grupa 6, sekcja 2\\
 \\
-KierujƒÖcy pracƒÖ: dr in≈º. Krzysztof Jaskot} 
+Kierujπcy pracπ: dr inø. Krzysztof Jaskot} 
 \date{Gliwice 2023}
 
 \begin{document}
@@ -104,17 +107,17 @@ KierujƒÖcy pracƒÖ: dr in≈º. Krzysztof Jaskot}
 
 \newpage
 
-\section{\textcolor{blue}{DONE?} Wstƒôp}
+\section{\textcolor{blue}{DONE?} WstÍp}
 
-Podczas studiowania na kierunku Automatyka i Robotyka mo≈ºna zauwa≈ºyƒá zadziwiajƒÖcy brak fizycznych pomocy naukowych. Ten projekt ma na celu poprawƒô tej sytuacji choƒáby w niewielkim stopniu. W tym celu zaproponowano stworzenie ramienia robota (manipulatora). Ma on na celu pom√≥c studentom z wizualizacjƒÖ koncepcji teoretycznych w prawdziwym ≈õwiecie, a nie tylko w ksiƒÖ≈ºkach, czy na ekranie komputera.
+Podczas studiowania na kierunku Automatyka i Robotyka moøna zauwaøyÊ zadziwiajπcy brak fizycznych pomocy naukowych. Ten projekt ma na celu poprawÍ tej sytuacji choÊby w niewielkim stopniu. W tym celu zaproponowano stworzenie ramienia robota (manipulatora). Ma on na celu pomÛc studentom z wizualizacjπ koncepcji teoretycznych w prawdziwym úwiecie, a nie tylko w ksiπøkach, czy na ekranie komputera.
 
-Projekt mo≈ºe pos≈Çu≈ºyƒá tak≈ºe do zachƒôcenia potencjalnych student√≥w podczas na przyk≈Çad dni otwartych czy wycieczek szkolnych.
+Projekt moøe pos≥uøyÊ takøe do zachÍcenia potencjalnych studentÛw podczas na przyk≥ad dni otwartych czy wycieczek szkolnych.
 
-G≈Ç√≥wnƒÖ inspiracjƒÖ projektu by≈Ç film zamieszczony na platformie YouTube z kana≈Çu \enquote{How To Mechatronics} pod tytu≈Çem \enquote{DIY Arduino Robot Arm with Smartphone Control} \cite*{HTM_YT}.
+G≥Ûwnπ inspiracjπ projektu by≥ film zamieszczony na platformie YouTube z kana≥u \enquote{How To Mechatronics} pod tytu≥em \enquote{DIY Arduino Robot Arm with Smartphone Control} \cite*{HTM_YT}.
 
-Nasz projekt korzysta z tych samych technologii, aczkolwiek wszystkie elementy (model 3D, oprogramowanie mikrokontrolera, kod aplikacji, schemat po≈ÇƒÖcze≈Ñ itd.) zosta≈Çy przygotowane przez nas.
+Nasz projekt korzysta z tych samych technologii, aczkolwiek wszystkie elementy (model 3D, oprogramowanie mikrokontrolera, kod aplikacji, schemat po≥πczeÒ itd.) zosta≥y przygotowane przez nas.
 
-W ramach projektu stworzono dydaktyczny model 5 osiowego manipulatora z chwytakiem, zrealizowanego w technologii druku 3D, sterowany aplikacjƒÖ na urzƒÖdzenia z systemem Android.
+W ramach projektu stworzono dydaktyczny model 5 osiowego manipulatora z chwytakiem, zrealizowanego w technologii druku 3D, sterowany aplikacjπ na urzπdzenia z systemem Android.
 
 \vspace*{2.5cm}
 
@@ -122,9 +125,9 @@ W ramach projektu stworzono dydaktyczny model 5 osiowego manipulatora z chwytaki
 
 \subsubsection{\textcolor{blue}{DONE?} Cel projektu}
 
-Celem projektu by≈Ça realizacja fizycznego modelu manipulatora przeznaczonego do cel√≥w dydaktycznych. Mo≈ºe byƒá on pomocny dla student√≥w w celu wizualizacji koncepcji teoretycznych w prawdziwym ≈õwiecie, a nie tylko w ksiƒÖ≈ºkach, czy na ekranie komputera.
+Celem projektu by≥a realizacja fizycznego modelu manipulatora przeznaczonego do celÛw dydaktycznych. Moøe byÊ on pomocny dla studentÛw w celu wizualizacji koncepcji teoretycznych w prawdziwym úwiecie, a nie tylko w ksiπøkach, czy na ekranie komputera.
 
-Projekt mo≈ºe pos≈Çu≈ºyƒá tak≈ºe do zachƒôcenia potencjalnych student√≥w podczas na przyk≈Çad dni otwartych czy wycieczek szkolnych.
+Projekt moøe pos≥uøyÊ takøe do zachÍcenia potencjalnych studentÛw podczas na przyk≥ad dni otwartych czy wycieczek szkolnych.
 
 \newpage
 
@@ -133,12 +136,12 @@ Projekt mo≈ºe pos≈Çu≈ºyƒá tak≈ºe do zachƒôcenia potencjalnych student√≥w podczas
 \begin{itemize}
     \item Niski koszt budowy.
     \item Niski koszt eksploatacji.
-    \item Stworzony z ≈Çatwodostƒôpnych materia≈Ç√≥w.
-    \item ≈Åatwo≈õƒá obs≈Çugi.
+    \item Stworzony z ≥atwodostÍpnych materia≥Ûw.
+    \item £atwoúÊ obs≥ugi.
     \item Niski koszt szkolenia.
-    \item Niska awaryjno≈õƒá.
-    \item ≈Åatwo≈õƒá naprawy.
-    \item Atrakcyjny wyglƒÖd.
+    \item Niska awaryjnoúÊ.
+    \item £atwoúÊ naprawy.
+    \item Atrakcyjny wyglπd.
 \end{itemize}
 
 \vspace*{2.5cm}
@@ -146,14 +149,14 @@ Projekt mo≈ºe pos≈Çu≈ºyƒá tak≈ºe do zachƒôcenia potencjalnych student√≥w podczas
 \subsubsection{\textcolor{blue}{DONE?} Zakres projektu}
 
 \begin{itemize}
-    \item Okre≈õlenie problemu i wykonanie do niego za≈Ço≈ºe≈Ñ.
-    \item Analiza mo≈ºliwych rozwiƒÖza≈Ñ.
-    \item Wyb√≥r element√≥w elektronicznych.
-    \item Wyb√≥r element√≥w mechanicznych.
-    \item Wykonanie projektu zgodnie z wcze≈õniejszymi za≈Ço≈ºeniami.
-    \item Uruchomienie, weryfikacja i przetestowanie sprzƒôtu oraz aplikacji.
-    \item Nakre≈õlenie ewentualnych kierunk√≥w rozwoju projektu.
-    \item Wnioski ko≈Ñcowe.
+    \item Okreúlenie problemu i wykonanie do niego za≥oøeÒ.
+    \item Analiza moøliwych rozwiπzaÒ.
+    \item WybÛr elementÛw elektronicznych.
+    \item WybÛr elementÛw mechanicznych.
+    \item Wykonanie projektu zgodnie z wczeúniejszymi za≥oøeniami.
+    \item Uruchomienie, weryfikacja i przetestowanie sprzÍtu oraz aplikacji.
+    \item Nakreúlenie ewentualnych kierunkÛw rozwoju projektu.
+    \item Wnioski koÒcowe.
 \end{itemize}
 
 \newpage
@@ -164,23 +167,23 @@ Projekt mo≈ºe pos≈Çu≈ºyƒá tak≈ºe do zachƒôcenia potencjalnych student√≥w podczas
 
 \begin{enumerate}
     \item Projektowanie modelu fizycznego robota oraz jego druk w technologii 3D.
-    \item Monta≈º mechaniczny oraz elektryczny.
+    \item Montaø mechaniczny oraz elektryczny.
     \item Tworzenie oprogramowania na mikrokontroler.
-    \item Tworzenie aplikacji sterujƒÖcej.
-    \item Projektowanie oraz realizacja komunikacji miƒôdzy mikrokontrolerem, \\a aplikacjƒÖ sterujƒÖcƒÖ.
+    \item Tworzenie aplikacji sterujπcej.
+    \item Projektowanie oraz realizacja komunikacji miÍdzy mikrokontrolerem, \\a aplikacjπ sterujπcπ.
 \end{enumerate}
 
 \vspace*{2.5cm}
 
 \subsection{\textcolor{blue}{DONE?} Harmonogram wykonany}
 
-Realizacja dzia≈ÇajƒÖcego prototypu zajƒô≈Ça zdecydowanie mniej czasu, ni≈º poczƒÖtkowo zak≈Çadano. Pozwoli≈Ço to na po≈õwiƒôcenie wiƒôkszej ilo≈õci czasu na uprawnienia i udoskonalanie projektu.
+Realizacja dzia≥ajπcego prototypu zajÍ≥a zdecydowanie mniej czasu, niø poczπtkowo zak≥adano. Pozwoli≥o to na poúwiÍcenie wiÍkszej iloúci czasu na uprawnienia i udoskonalanie projektu.
 
 \begin{enumerate}
-    \item Projektowanie modelu fizycznego robota oraz jego druk w technologii 3D. Monta≈º mechaniczny oraz elektryczny.
-    \item Tworzenie oprogramowania na mikrokontroler oraz aplikacji sterujƒÖcej. Opracowanie protoko≈Çu komunikacji miƒôdzy mikrokontrolerem, a aplikacjƒÖ sterujƒÖcƒÖ.
-    \item Doskonalenie projektu ‚Äî debugowanie
-    \item Doskonalenie projektu ‚Äî poprawki mechaniczne, usprawnienia
+    \item Projektowanie modelu fizycznego robota oraz jego druk w technologii 3D. Montaø mechaniczny oraz elektryczny.
+    \item Tworzenie oprogramowania na mikrokontroler oraz aplikacji sterujπcej. Opracowanie protoko≥u komunikacji miÍdzy mikrokontrolerem, a aplikacjπ sterujπcπ.
+    \item Doskonalenie projektu ó debugowanie
+    \item Doskonalenie projektu ó poprawki mechaniczne, usprawnienia
     \item Tworzenie dokumentacji
 \end{enumerate}
 
@@ -194,24 +197,24 @@ W nawiasach [] podano link do dokumentacji.
     \begin{center}
         \begin{tabular}{|r|l|l|c|r|r|}
             \hline
-            Lp. & Typ                                                  & Producent & Ilo≈õƒá & Cena     & Warto≈õƒá  \\
+            Lp. & Typ                                                  & Producent & IloúÊ & Cena     & WartoúÊ  \\
             \hline
-            1.  & Mikrokontroler Wemos D1 mini [\ref{wemos}]           & Wemos     & 1     & 9,48 z≈Ç  & 9,48 z≈Ç  \\
-            2.  & Modu≈Ç Bluetooth HC-05 [\ref{HC05data}, \ref{HC05at}] & SZYTF     & 1     & 9,40 z≈Ç  & 9,40 z≈Ç  \\
-            3.  & Micro Servo 9g SG90 [\ref{ServoSG90}]                & HWAYEH    & 3     & 3,97 z≈Ç  & 11,91 z≈Ç \\
-            4.  & Servo Mg996r [\ref{ServoMg996r}]                     & WAVGAT    & 3     & 12 z≈Ç    & 36 z≈Ç    \\
-            5.  & Obudowa ramienia (druk 3D)                           & n/d       & 1     & 40 z≈Ç    & 40 z≈Ç    \\
-            6.  & Przewody                                             & n/d       & n/d   & n/d      & 10 z≈Ç    \\
-            7.  & P≈Çytka prototypowa                                   & diymore   & 1     & 3,15 z≈Ç  & 3,15 z≈Ç  \\
-            8.  & Wkrƒôty M3                                            & n/d       & 4     & 0,20 z≈Ç  & 0,80 z≈Ç  \\
-            9.  & ≈öruby M3                                             & n/d       & 8     & 0,20 z≈Ç  & 1,60 z≈Ç  \\
-            10. & Nakrƒôtki M3                                          & n/d       & 18    & 0,20 z≈Ç  & 3,60 z≈Ç  \\
-            11. & Drewniana podstawa                                   & n/d       & 1     & 10,00 z≈Ç & 10,00 z≈Ç \\
-            12. & Kondensator $1000\ \mu F$                            & Chong     & 1     & 0,50 z≈Ç  & 0,50 z≈Ç  \\
+            1.  & Mikrokontroler Wemos D1 mini [\ref{wemos}]           & Wemos     & 1     & 9,48 z≥  & 9,48 z≥  \\
+            2.  & Modu≥ Bluetooth HC-05 [\ref{HC05data}, \ref{HC05at}] & SZYTF     & 1     & 9,40 z≥  & 9,40 z≥  \\
+            3.  & Micro Servo 9g SG90 [\ref{ServoSG90}]                & HWAYEH    & 3     & 3,97 z≥  & 11,91 z≥ \\
+            4.  & Servo Mg996r [\ref{ServoMg996r}]                     & WAVGAT    & 3     & 12 z≥    & 36 z≥    \\
+            5.  & Obudowa ramienia (druk 3D)                           & n/d       & 1     & 40 z≥    & 40 z≥    \\
+            6.  & Przewody                                             & n/d       & n/d   & n/d      & 10 z≥    \\
+            7.  & P≥ytka prototypowa                                   & diymore   & 1     & 3,15 z≥  & 3,15 z≥  \\
+            8.  & WkrÍty M3                                            & n/d       & 4     & 0,20 z≥  & 0,80 z≥  \\
+            9.  & åruby M3                                             & n/d       & 8     & 0,20 z≥  & 1,60 z≥  \\
+            10. & NakrÍtki M3                                          & n/d       & 18    & 0,20 z≥  & 3,60 z≥  \\
+            11. & Drewniana podstawa                                   & n/d       & 1     & 10,00 z≥ & 10,00 z≥ \\
+            12. & Kondensator $1000\ \mu F$                            & Chong     & 1     & 0,50 z≥  & 0,50 z≥  \\
             \hline
-            \multicolumn{6}{|r|}{Suma = 136,44 z≈Ç}                                                               \\
+            \multicolumn{6}{|r|}{Suma = 136,44 z≥}                                                               \\
             \hline
-            \multicolumn{6}{|r|}{Ilo≈õƒá roboczogodzin = 60}                                                       \\
+            \multicolumn{6}{|r|}{IloúÊ roboczogodzin = 60}                                                       \\
             \hline
         \end{tabular}
     \end{center}
@@ -221,16 +224,16 @@ W nawiasach [] podano link do dokumentacji.
 
 \newpage
 
-\section{\textcolor{red}{WIP} UrzƒÖdzenie wraz z aplikacjƒÖ}
+\section{\textcolor{red}{WIP} Urzπdzenie wraz z aplikacjπ}
 
-TworzƒÖc ten projekt mamy na celu stworzenie przydatnej pomocy naukowej dla os√≥b zainteresowanych tematem automatyki i robotyki, kt√≥ry pozwoli na ≈Çatwiejsze przyswojenie teorii oraz zobaczenie jej praktycznego zastosowania.
+Tworzπc ten projekt mamy na celu stworzenie przydatnej pomocy naukowej dla osÛb zainteresowanych tematem automatyki i robotyki, ktÛry pozwoli na ≥atwiejsze przyswojenie teorii oraz zobaczenie jej praktycznego zastosowania.
 
-\subsection{\textcolor{blue}{DONE?} Okre≈õlenie problemu}
+\subsection{\textcolor{blue}{DONE?} Okreúlenie problemu}
 
-Problemem wiƒôkszo≈õci student√≥w jest czƒôsto brak motywacji do nauki zwiƒÖzany z poczuciem braku sensu przerabianego materia≈Çu. Ten projekt ma na celu poprawiƒá ten stan rzeczy.
-Brak wyobra≈ºenia o realnym zastosowaniu zdobytej wiedzy utrudnia pracƒô. Studenci nie widzƒÖ po≈ÇƒÖczenia teorii z praktykƒÖ, jak przedstawiono na Rysunku \ref{teoriaVSprakrtyka}.
+Problemem wiÍkszoúci studentÛw jest czÍsto brak motywacji do nauki zwiπzany z poczuciem braku sensu przerabianego materia≥u. Ten projekt ma na celu poprawiÊ ten stan rzeczy.
+Brak wyobraøenia o realnym zastosowaniu zdobytej wiedzy utrudnia pracÍ. Studenci nie widzπ po≥πczenia teorii z praktykπ, jak przedstawiono na Rysunku \ref{teoriaVSprakrtyka}.
 
-RozwiƒÖzanie? Stworzenie fizycznego modelu.
+Rozwiπzanie? Stworzenie fizycznego modelu.
 
 \begin{figure}[h!]
     $$\boldsymbol{A_i}=Rot(z,\theta_i)Trans(0,0,\lambda_i)Trans(l_i,0,0)Rot(x,\alpha_i)=$$
@@ -248,77 +251,77 @@ RozwiƒÖzanie? Stworzenie fizycznego modelu.
     \begin{center}
         \includegraphics[width=\textwidth]{img/top.jpg}
     \end{center}
-    \caption{Po≈ÇƒÖczenie teorii z praktykƒÖ}
+    \caption{Po≥πczenie teorii z praktykπ}
     \label{teoriaVSprakrtyka}
 \end{figure}
 
-\subsection{\textcolor{blue}{DONE?} Analiza rozwiƒÖza≈Ñ}
+\subsection{\textcolor{blue}{DONE?} Analiza rozwiπzaÒ}
 
-Przyk≈Çadowe rozwiƒÖzania przedstawionego problemu:
+Przyk≥adowe rozwiπzania przedstawionego problemu:
 \begin{itemize}
-    \item Wycieczki do zak≈Çad√≥w przemys≈Çowych
+    \item Wycieczki do zak≥adÛw przemys≥owych
           \begin{itemize}
-              \item[+] Obserwacja prawdziwych zastosowa≈Ñ w praktyce
+              \item[+] Obserwacja prawdziwych zastosowaÒ w praktyce
               \item[--] Zmiana organizacji roku akademickiego
               \item[--] Organizacja wyjazdu
           \end{itemize}
-    \item Wiƒôcej zajƒôƒá praktycznych
+    \item WiÍcej zajÍÊ praktycznych
           \begin{itemize}
-              \item[+] Praca na urzƒÖdzeniach pozwoli lepiej przyswoiƒá wiedzƒô
+              \item[+] Praca na urzπdzeniach pozwoli lepiej przyswoiÊ wiedzÍ
               \item[--] Zmiana organizacji roku akademickiego
-              \item[--] Wysoki koszt zakupu urzƒÖdze≈Ñ
+              \item[--] Wysoki koszt zakupu urzπdzeÒ
               \item[--] Wysoki koszt kadrowy
           \end{itemize}
-    \item Dopuszczenie student√≥w do pracy na prawdziwym sprzƒôcie ju≈º od poczƒÖtku studiowania
+    \item Dopuszczenie studentÛw do pracy na prawdziwym sprzÍcie juø od poczπtku studiowania
           \begin{itemize}
-              \item[+] Motywacja od wczesnych etap√≥w edukacji
+              \item[+] Motywacja od wczesnych etapÛw edukacji
               \item[--] Zmiana organizacji roku akademickiego
-              \item[--] Wysoki koszt zakupu urzƒÖdze≈Ñ
+              \item[--] Wysoki koszt zakupu urzπdzeÒ
               \item[--] Wysoki koszt kadrowy
           \end{itemize}
-    \item Stworzenie modelu prawdziwego urzƒÖdzenia
+    \item Stworzenie modelu prawdziwego urzπdzenia
           \begin{itemize}
               \item[+] Niski koszt
               \item[+] Prostota realizacji
-              \item[--] Nak≈Çad pracy w≈Ço≈ºony w stworzenie modelu
+              \item[--] Nak≥ad pracy w≥oøony w stworzenie modelu
           \end{itemize}
 \end{itemize}
-Kryteria wyboru rozwiƒÖzania:
+Kryteria wyboru rozwiπzania:
 \begin{itemize}
     \item Niskie koszta finansowe
     \item Niskie koszta kadrowe
-    \item Niska ingerencja w organizacjƒô roku akademickiego
-    \item Wysoka dostƒôpno≈õƒá
-    \item Motywacja student√≥w
+    \item Niska ingerencja w organizacjÍ roku akademickiego
+    \item Wysoka dostÍpnoúÊ
+    \item Motywacja studentÛw
 \end{itemize}
 
-\subsection{\textcolor{blue}{DONE?} Zaproponowane rozwiƒÖzanie}
+\subsection{\textcolor{blue}{DONE?} Zaproponowane rozwiπzanie}
 
-W tym punkcie nale≈ºy przedstawiƒá wybrane rozwiƒÖzanie problemu, wraz z uzasadnieniem wyboru na postawie kryteri√≥w z poprzedniego punktu.
+W tym punkcie naleøy przedstawiÊ wybrane rozwiπzanie problemu, wraz z uzasadnieniem wyboru na postawie kryteriÛw z poprzedniego punktu.
 
-Wybrane rozwiƒÖzanie: \enquote{Stworzenie modelu prawdziwego urzƒÖdzenia}.
+Wybrane rozwiπzanie: \enquote{Stworzenie modelu prawdziwego urzπdzenia}.
 
-Ta propozycja spe≈Çnia wszystkie wymagania projektowe:
+Ta propozycja spe≥nia wszystkie wymagania projektowe:
 \begin{itemize}
     \item Niskie koszta finansowe
           \begin{itemize}
-              \item Koszt $<150$ z≈Ç
+              \item Koszt $<150$ z≥
           \end{itemize}
     \item Niskie koszta kadrowe
           \begin{itemize}
-              \item Uczelnia ju≈º na chwilƒô obecnƒÖ posiada wyszkolonƒÖ kadrƒô
+              \item Uczelnia juø na chwilÍ obecnπ posiada wyszkolonπ kadrÍ
           \end{itemize}
-    \item Niska ingerencja w organizacjƒô roku akademickiego
+    \item Niska ingerencja w organizacjÍ roku akademickiego
           \begin{itemize}
-              \item Niewielka ilo≈õƒá godzin potrzebna na pracƒô z modelem
+              \item Niewielka iloúÊ godzin potrzebna na pracÍ z modelem
           \end{itemize}
-    \item Wysoka dostƒôpno≈õƒá
+    \item Wysoka dostÍpnoúÊ
           \begin{itemize}
-              \item Niski koszt i dostƒôpno≈õƒá materia≈Ç√≥w pozwala na stworzenie wielu modeli
+              \item Niski koszt i dostÍpnoúÊ materia≥Ûw pozwala na stworzenie wielu modeli
           \end{itemize}
-    \item Motywacja student√≥w
+    \item Motywacja studentÛw
           \begin{itemize}
-              \item Dostƒôp do fizycznego modelu
+              \item DostÍp do fizycznego modelu
           \end{itemize}
 \end{itemize}
 
@@ -326,37 +329,37 @@ Ta propozycja spe≈Çnia wszystkie wymagania projektowe:
 
 \subsection{\textcolor{red}{WIP} Wykonanie}
 
-\subsubsection{\textcolor{blue}{DONE?} Wyb√≥r element√≥w}
+\subsubsection{\textcolor{blue}{DONE?} WybÛr elementÛw}
 
-Prace rozpoczƒôto od doboru element√≥w elektronicznych i mechanicznych oraz wyboru procesu technologicznego wykonania manipulatora. Poni≈ºej przedstawiono argumentacjƒô wyboru najwa≈ºniejszych element√≥w.
+Prace rozpoczÍto od doboru elementÛw elektronicznych i mechanicznych oraz wyboru procesu technologicznego wykonania manipulatora. Poniøej przedstawiono argumentacjÍ wyboru najwaøniejszych elementÛw.
 
 \medskip
 
 Elementy:
 \begin{itemize}
     \item Mikrokontroler Wemos D1 mini [\ref{wemos}]
-    \item Modu≈Ç Bluetooth HC-05 [\ref{HC05data}, \ref{HC05at}]
+    \item Modu≥ Bluetooth HC-05 [\ref{HC05data}, \ref{HC05at}]
     \item HWAYEH Micro Servo 9g SG90 [\ref{ServoSG90}]
     \item WAVGAT Servo Mg996r [\ref{ServoMg996r}]
 \end{itemize}
-wybrano ze wzglƒôdu na:
+wybrano ze wzglÍdu na:
 \begin{itemize}
     \item Niski koszt
-    \item Du≈ºa dostƒôpno≈õƒá
-    \item Zaznajomienie autor√≥w z elementem
+    \item Duøa dostÍpnoúÊ
+    \item Zaznajomienie autorÛw z elementem
 \end{itemize}
 
 \medskip
 
-Jako proces technologiczny wykorzystany do stworzenia korpusu urzƒÖdzenia wybrano druk 3D ze wzglƒôdu na niski koszt i powszechnƒÖ dostƒôpno≈õƒá. Technologia ta r√≥wnie≈º umo≈ºliwia optymalizacjƒô procesu tw√≥rczego poprzez wielokrotne iteracje.
+Jako proces technologiczny wykorzystany do stworzenia korpusu urzπdzenia wybrano druk 3D ze wzglÍdu na niski koszt i powszechnπ dostÍpnoúÊ. Technologia ta rÛwnieø umoøliwia optymalizacjÍ procesu twÛrczego poprzez wielokrotne iteracje.
 
 \newpage
 
 \subsubsection{\textcolor{blue}{DONE?} Model 3D}
 
-Nastƒôpnym krokiem by≈Ço zaprojektowanie modelu 3D manipulatora przy u≈ºyciu programu \href{https://www.autodesk.pl/products/fusion-360}{\underline{Autodesk Fusion 360}\footnote{Zintegrowane oprogramowanie CAD, CAM, CAE i PCB}}.
+NastÍpnym krokiem by≥o zaprojektowanie modelu 3D manipulatora przy uøyciu programu \href{https://www.autodesk.pl/products/fusion-360}{\underline{Autodesk Fusion 360}\footnote{Zintegrowane oprogramowanie CAD, CAM, CAE i PCB}}.
 
-Program Autodesk Fusion 360 to bardzo przystƒôpna alternatywa dla ≈õrodowiska Autodesk Inventor. Przy braku poprzedniego do≈õwiadczenia autorzy byli w stanie ca≈Çkowicie od zera zaprojektowaƒá i zrealizowaƒá w pe≈Çni dzia≈ÇajƒÖcy model manipulatora. Proces tworzenia korpusu pokazano na Rysunkach \ref{Modelowanie3Dleft} i \ref{Modelowanie3Dtop}\footnote{Wizualizacje stworzono w programie \href{https://www.blender.org}{\underline{Blender}}}, a gotowy model przedstawiono na Rysunku \ref{AutodeskViewer}.
+Program Autodesk Fusion 360 to bardzo przystÍpna alternatywa dla úrodowiska Autodesk Inventor. Przy braku poprzedniego doúwiadczenia autorzy byli w stanie ca≥kowicie od zera zaprojektowaÊ i zrealizowaÊ w pe≥ni dzia≥ajπcy model manipulatora. Proces tworzenia korpusu pokazano na Rysunkach \ref{Modelowanie3Dleft} i \ref{Modelowanie3Dtop}\footnote{Wizualizacje stworzono w programie \href{https://www.blender.org}{\underline{Blender}}}, a gotowy model przedstawiono na Rysunku \ref{AutodeskViewer}.
 
 \begin{figure}[h!]
     \begin{center}
@@ -374,7 +377,7 @@ Program Autodesk Fusion 360 to bardzo przystƒôpna alternatywa dla ≈õrodowiska Au
         \includegraphics[width=0.4\textwidth]{img/topW.png}
         \includegraphics[width=0.4\textwidth]{img/topC.png}
     \end{center}
-    \caption{Proces tworzenia modelu 3D - Widok z g√≥ry}
+    \caption{Proces tworzenia modelu 3D - Widok z gÛry}
     \label{Modelowanie3Dtop}
 \end{figure}
 
@@ -386,7 +389,7 @@ Program Autodesk Fusion 360 to bardzo przystƒôpna alternatywa dla ≈õrodowiska Au
     \caption{
         Gotowy model w programie
         \href{https://viewer.autodesk.com/}
-        {\underline{Autodesk Viewer}} \\ Narzƒôdzie online do wy≈õwietlania plik√≥w 2D i 3D}
+        {\underline{Autodesk Viewer}} \\ NarzÍdzie online do wyúwietlania plikÛw 2D i 3D}
     \label{AutodeskViewer}
 \end{figure}
 
@@ -394,7 +397,7 @@ Program Autodesk Fusion 360 to bardzo przystƒôpna alternatywa dla ≈õrodowiska Au
 
 \subsubsection{\textcolor{blue}{DONE?} Konstrukcja mechaniczna}
 
-Model z≈Ço≈ºono przy u≈ºyciu ≈õrub, wkrƒôt√≥w i nakrƒôtek M3, co przedstawiono na Rysunkach \ref{mechC} i \ref{mechB}.
+Model z≥oøono przy uøyciu úrub, wkrÍtÛw i nakrÍtek M3, co przedstawiono na Rysunkach \ref{mechC} i \ref{mechB}.
 
 \begin{figure}[h!]
     \begin{center}
@@ -414,7 +417,7 @@ Model z≈Ço≈ºono przy u≈ºyciu ≈õrub, wkrƒôt√≥w i nakrƒôtek M3, co przedstawiono n
 
 \subsubsection{\textcolor{blue}{DONE?} Schemat elektryczny}
 
-Na Rysunku \ref{SchematElektryczny}\footnote{Stworzono przy u≈ºyciu \href{https://www.circuito.io}{\underline{circuito.io}}} przedstawiono po≈ÇƒÖczenie element√≥w elektronicznych. Natomiast faktyczne po≈ÇƒÖczenia elektryczne pokazano na Rysunku \ref{Breadboard}.
+Na Rysunku \ref{SchematElektryczny}\footnote{Stworzono przy uøyciu \href{https://www.circuito.io}{\underline{circuito.io}}} przedstawiono po≥πczenie elementÛw elektronicznych. Natomiast faktyczne po≥πczenia elektryczne pokazano na Rysunku \ref{Breadboard}.
 
 \vspace{4cm}
 
@@ -422,7 +425,7 @@ Na Rysunku \ref{SchematElektryczny}\footnote{Stworzono przy u≈ºyciu \href{https:
     \begin{center}
         \includegraphics[width=\textwidth]{img/schemat.png}
     \end{center}
-    \caption{Schemat po≈ÇƒÖcze≈Ñ elektrycznych}
+    \caption{Schemat po≥πczeÒ elektrycznych}
     \vspace{4cm}
     \label{SchematElektryczny}
 \end{figure}
@@ -431,13 +434,13 @@ Na Rysunku \ref{SchematElektryczny}\footnote{Stworzono przy u≈ºyciu \href{https:
     \begin{center}
         \includegraphics[width=\textwidth]{img/breadboard.jpg}
     \end{center}
-    \caption{Po≈ÇƒÖczenia elektryczne}
+    \caption{Po≥πczenia elektryczne}
     \label{Breadboard}
 \end{figure}
 
 \subsubsection{\textcolor{blue}{DONE?} Aplikacja}
 
-Aplikacja powsta≈Ça w \href{https://appinventor.mit.edu}{\underline{MIT App Inventor}}\footnote{Zintegrowane ≈õrodowisko programistyczne do tworzenia aplikacji mobilnych} (Rysunki \ref{MITapp} i \ref{MITblocks}). ≈örodowisko to oferuje prostotƒô w realizacji projekt√≥w. Nie wymaga ≈ºadnego do≈õwiadczenia od u≈ºytkownika. Programowanie odbywa siƒô we w≈Çasnym jƒôzyku graficznym (du≈ºe podobie≈Ñstwo do \href{https://scratch.mit.edu}{\underline{Scratch}}\footnote{Interpretowany wizualny jƒôzyk programowania}). Kod dostarczonej aplikacji pokazano na Za≈ÇƒÖcznikach \ref{AppBluetooth}, \ref{AppPrzyciski}, \ref{AppSlidery} i \ref{AppKomendy}. Na Rysunku \ref{FinalApp} przedstawiono ostatecznƒÖ szatƒô graficznƒÖ aplikacji, a na Rysunku \ref{logoapp} zademonstrowano logo aplikacji.
+Aplikacja powsta≥a w \href{https://appinventor.mit.edu}{\underline{MIT App Inventor}}\footnote{Zintegrowane úrodowisko programistyczne do tworzenia aplikacji mobilnych} (Rysunki \ref{MITapp} i \ref{MITblocks}). årodowisko to oferuje prostotÍ w realizacji projektÛw. Nie wymaga øadnego doúwiadczenia od uøytkownika. Programowanie odbywa siÍ we w≥asnym jÍzyku graficznym (duøe podobieÒstwo do \href{https://scratch.mit.edu}{\underline{Scratch}}\footnote{Interpretowany wizualny jÍzyk programowania}). Kod dostarczonej aplikacji pokazano na Za≥πcznikach \ref{AppBluetooth}, \ref{AppPrzyciski}, \ref{AppSlidery} i \ref{AppKomendy}. Na Rysunku \ref{FinalApp} przedstawiono ostatecznπ szatÍ graficznπ aplikacji, a na Rysunku \ref{logoapp} zademonstrowano logo aplikacji.
 
 \begin{figure}[h!]
     \begin{center}
@@ -471,13 +474,13 @@ Aplikacja powsta≈Ça w \href{https://appinventor.mit.edu}{\underline{MIT App Inve
     \label{logoapp}
 \end{figure}
 
-\subsubsection{\textcolor{blue}{DONE?} Protok√≥≈Ç komunikacyjny}
+\subsubsection{\textcolor{blue}{DONE?} ProtokÛ≥ komunikacyjny}
 
-Komunikacja aplikacji mobilnej z mikrokontrolerem odbywa siƒô poprzez protok√≥≈Ç Bluetooth przy u≈ºyciu modu≈Çu HC-05. Ka≈ºdy komunikat to odpowiednio sformatowany string. Komendy komunikacyjne przedstawiono w Tabeli \ref{Komunikacja}. Przyk≈Çadowe komunikaty:
+Komunikacja aplikacji mobilnej z mikrokontrolerem odbywa siÍ poprzez protokÛ≥ Bluetooth przy uøyciu modu≥u HC-05. Kaødy komunikat to odpowiednio sformatowany string. Komendy komunikacyjne przedstawiono w Tabeli \ref{Komunikacja}. Przyk≥adowe komunikaty:
 \begin{itemize}
-    \item \enquote{s1128\textbackslash0} - ustawienie serwomechanizmu 1 na pozycjƒô 128
-    \item \enquote{s564\textbackslash0} - ustawienie serwomechanizmu 5 na pozycjƒô 64
-    \item \enquote{c1\textbackslash0} - zapisanie aktualnej pozycji serwomechanizm√≥w w pamiƒôci do p√≥≈∫niejszego odtworzenia
+    \item \enquote{s1128\textbackslash0} - ustawienie serwomechanizmu 1 na pozycjÍ 128
+    \item \enquote{s564\textbackslash0} - ustawienie serwomechanizmu 5 na pozycjÍ 64
+    \item \enquote{c1\textbackslash0} - zapisanie aktualnej pozycji serwomechanizmÛw w pamiÍci do pÛüniejszego odtworzenia
     \item \enquote{c4\textbackslash0} - wyczyszczenie zapisanej sekwencji ruchowej
 \end{itemize}
 
@@ -487,21 +490,21 @@ Komunikacja aplikacji mobilnej z mikrokontrolerem odbywa siƒô poprzez protok√≥≈Ç
     \begin{center}
         \begin{tabular}{|c|c|c|m{8cm}|}
             \hline
-            Komenda & Numer & Warto≈õƒá & Funkcja                                                                                   \\
+            Komenda & Numer & WartoúÊ & Funkcja                                                                                   \\
             \hline
-            s       & 1     & x       & Ustawienie serwomechanizmu na pozycjƒô x                                                   \\
+            s       & 1     & x       & Ustawienie serwomechanizmu na pozycjÍ x                                                   \\
             \hline
-            s       & 2     & x       & Ustawienie serwomechanizmu na pozycjƒô x                                                   \\
+            s       & 2     & x       & Ustawienie serwomechanizmu na pozycjÍ x                                                   \\
             \hline
-            s       & 3     & x       & Ustawienie serwomechanizmu na pozycjƒô x                                                   \\
+            s       & 3     & x       & Ustawienie serwomechanizmu na pozycjÍ x                                                   \\
             \hline
-            s       & 4     & x       & Ustawienie serwomechanizmu na pozycjƒô x                                                   \\
+            s       & 4     & x       & Ustawienie serwomechanizmu na pozycjÍ x                                                   \\
             \hline
-            s       & 5     & x       & Ustawienie serwomechanizmu na pozycjƒô x                                                   \\
+            s       & 5     & x       & Ustawienie serwomechanizmu na pozycjÍ x                                                   \\
             \hline
-            s       & 6     & x       & Ustawienie serwomechanizmu na pozycjƒô x                                                   \\
+            s       & 6     & x       & Ustawienie serwomechanizmu na pozycjÍ x                                                   \\
             \hline
-            c       & 1     & -       & Save - zapisanie aktualnej pozycji serwomechanizm√≥w w pamiƒôci do p√≥≈∫niejszego odtworzenia \\
+            c       & 1     & -       & Save - zapisanie aktualnej pozycji serwomechanizmÛw w pamiÍci do pÛüniejszego odtworzenia \\
             \hline
             c       & 2     & -       & Play - odtworzanie zapisanej sekwencji ruchowej                                           \\
             \hline
@@ -511,7 +514,7 @@ Komunikacja aplikacji mobilnej z mikrokontrolerem odbywa siƒô poprzez protok√≥≈Ç
             \hline
         \end{tabular}
     \end{center}
-    \caption{Protok√≥≈Ç komunikacyjny}
+    \caption{ProtokÛ≥ komunikacyjny}
     \label{Komunikacja}
 \end{table}
 
@@ -519,7 +522,7 @@ Komunikacja aplikacji mobilnej z mikrokontrolerem odbywa siƒô poprzez protok√≥≈Ç
 
 \subsubsection{\textcolor{blue}{DONE?} Kod mikrokontrolera}
 
-Kod sterujƒÖcy dzia≈Çaniem mikrokontrolera powsta≈Ç w \href{https://code.visualstudio.com}{\underline{Visual Studio Code}}\footnote{Darmowy edytor kodu ≈∫r√≥d≈Çowego z kolorowaniem sk≈Çadni dla wielu jƒôzyk√≥w, stworzony przez Microsoft o otwartym kodzie ≈∫r√≥d≈Çowym} przy pomocy \href{https://platformio.org}{\underline{PlatformIO}}\footnote{\enquote{A user-friendly and extensible integrated development environment with a set of professional development instruments, providing modern and powerful features to speed up yet simplify the creation and delivery of embedded products}\cite{platformio}}. Schemat blokowy kodu przedstawiono na rysunku \ref{SBCode}\footnote{Schemat wykonano w programie \href{https://www.lucidchart.com}{\underline{Lucidchart}}}. Ca≈Ço≈õƒá kodu ≈∫r√≥d≈Çowego znajduje siƒô w Za≈ÇƒÖczniku \ref{KodMikrokontrolera}.
+Kod sterujπcy dzia≥aniem mikrokontrolera powsta≥ w \href{https://code.visualstudio.com}{\underline{Visual Studio Code}}\footnote{Darmowy edytor kodu ürÛd≥owego z kolorowaniem sk≥adni dla wielu jÍzykÛw, stworzony przez Microsoft o otwartym kodzie ürÛd≥owym} przy pomocy \href{https://platformio.org}{\underline{PlatformIO}}\footnote{\enquote{A user-friendly and extensible integrated development environment with a set of professional development instruments, providing modern and powerful features to speed up yet simplify the creation and delivery of embedded products}\cite{platformio}}. Schemat blokowy kodu przedstawiono na rysunku \ref{SBCode}\footnote{Schemat wykonano w programie \href{https://www.lucidchart.com}{\underline{Lucidchart}}}. Ca≥oúÊ kodu ürÛd≥owego znajduje siÍ w Za≥πczniku \ref{KodMikrokontrolera}.
 
 \vspace{1cm}
 
@@ -531,7 +534,7 @@ Kod sterujƒÖcy dzia≈Çaniem mikrokontrolera powsta≈Ç w \href{https://code.visuals
     \label{SBCode}
 \end{figure}
 
-W celu ograniczenia prƒôdko≈õci poruszania siƒô ka≈ºdego z serwomechanizm√≥w zastosowano funkcjƒô przedstawionƒÖ na Rysunku \ref{void_moveServo}. Wykonuje ona swoje zadanie poprzez iteracyjnƒÖ inkrementacjƒô lub dekrementacjƒô warto≈õci pozycji.
+W celu ograniczenia prÍdkoúci poruszania siÍ kaødego z serwomechanizmÛw zastosowano funkcjÍ przedstawionπ na Rysunku \ref{void_moveServo}. Wykonuje ona swoje zadanie poprzez iteracyjnπ inkrementacjÍ lub dekrementacjÍ wartoúci pozycji.
 
 \vspace{1cm}
 
@@ -543,7 +546,7 @@ W celu ograniczenia prƒôdko≈õci poruszania siƒô ka≈ºdego z serwomechanizm√≥w zas
 
 \newpage
 
-Innym ciekawym rozwiƒÖzaniem jest realizacja odtwarzania zapisanej sekwencji ruch√≥w, kt√≥re pokazano na Rysunku \ref{casePlay}. RozwiƒÖzanie polega na iteracyjnej inkrementacji bƒÖd≈∫ dekrementacji warto≈õci pozycji dla wszystkich serwomechanizm√≥w po kolei.
+Innym ciekawym rozwiπzaniem jest realizacja odtwarzania zapisanej sekwencji ruchÛw, ktÛre pokazano na Rysunku \ref{casePlay}. Rozwiπzanie polega na iteracyjnej inkrementacji bπdü dekrementacji wartoúci pozycji dla wszystkich serwomechanizmÛw po kolei.
 
 \vspace{1cm}
 
@@ -555,7 +558,7 @@ Innym ciekawym rozwiƒÖzaniem jest realizacja odtwarzania zapisanej sekwencji ruc
 
 \newpage
 
-NieocenionƒÖ pomocƒÖ okaza≈Çy siƒô biblioteki:
+Nieocenionπ pomocπ okaza≥y siÍ biblioteki:
 
 \begin{itemize}
     \item Arduino.h \cite{Arduino_lib}
@@ -565,13 +568,13 @@ NieocenionƒÖ pomocƒÖ okaza≈Çy siƒô biblioteki:
 
 \vspace{3cm}
 
-≈örodowisko Visual Studio Code (Rysunek \ref{vscodepic}) pozwoli≈Ço nam na sprawnƒÖ pracƒô.
+årodowisko Visual Studio Code (Rysunek \ref{vscodepic}) pozwoli≥o nam na sprawnπ pracÍ.
 
 \begin{figure}[h!]
     \begin{center}
         \includegraphics[width=\textwidth]{img/vscode.png}
     \end{center}
-    \caption{≈örodowisko Visual Studio Code}
+    \caption{årodowisko Visual Studio Code}
     \label{vscodepic}
 \end{figure}
 
@@ -579,7 +582,7 @@ NieocenionƒÖ pomocƒÖ okaza≈Çy siƒô biblioteki:
 
 \subsubsection{\textcolor{blue}{DONE?} Kontrola wersji}
 
-W ramach tworzenia projektu zosta≈Ça wykorzystana kontrola wersji \href{https://git-scm.com}{\underline{Git}}\footnote{Rozproszony system kontroli wersji} (Rysunek \ref{gitadog}) w po≈ÇƒÖczenium z serwisem \href{https://github.com}{\underline{GitHub}}\footnote{Hostingowy serwis internetowy przeznaczony do projekt√≥w programistycznych wykorzystujƒÖcych system kontroli wersji Git}.
+W ramach tworzenia projektu zosta≥a wykorzystana kontrola wersji \href{https://git-scm.com}{\underline{Git}}\footnote{Rozproszony system kontroli wersji} (Rysunek \ref{gitadog}) w po≥πczenium z serwisem \href{https://github.com}{\underline{GitHub}}\footnote{Hostingowy serwis internetowy przeznaczony do projektÛw programistycznych wykorzystujπcych system kontroli wersji Git}.
 
 \begin{figure}[h!]
     \begin{center}
@@ -593,7 +596,7 @@ W ramach tworzenia projektu zosta≈Ça wykorzystana kontrola wersji \href{https://
 
 \subsubsection{\textcolor{red}{WIP} Dokumentacja}
 
-Dokumentacja zosta≈Ça stworzona z wykorzystaniem \href{https://www.latex-project.org}{\underline{\LaTeX}}\footnote{Oprogramowanie do zautomatyzowanego sk≈Çadu tekstu, a tak≈ºe zwiƒÖzany z nim jƒôzyk znacznik√≥w, s≈Çu≈ºƒÖcy do formatowania dokument√≥w tekstowych i tekstowo-graficznych}\\(Rysunek \ref{latexvs}).
+Dokumentacja zosta≥a stworzona z wykorzystaniem \href{https://www.latex-project.org}{\underline{\LaTeX}}\footnote{Oprogramowanie do zautomatyzowanego sk≥adu tekstu, a takøe zwiπzany z nim jÍzyk znacznikÛw, s≥uøπcy do formatowania dokumentÛw tekstowych i tekstowo-graficznych}\\(Rysunek \ref{latexvs}).
 
 \vspace{3cm}
 
@@ -607,15 +610,15 @@ Dokumentacja zosta≈Ça stworzona z wykorzystaniem \href{https://www.latex-project
 
 \newpage
 
-\subsection{\textcolor{orange}{TODO} Problemy w trakcie tworzenia sprzƒôtu i aplikacji}
+\subsection{\textcolor{orange}{TODO} Problemy w trakcie tworzenia sprzÍtu i aplikacji}
 
-W tym punkcie nale≈ºy przedstawiƒá jakie by≈Çy problemy przed kt√≥rymi stanƒôli autorzy projektu w trakcie jego realizacji i jak je rozwiƒÖzali.
+W tym punkcie naleøy przedstawiÊ jakie by≥y problemy przed ktÛrymi stanÍli autorzy projektu w trakcie jego realizacji i jak je rozwiπzali.
 
 \newpage
 
 \section{\textcolor{orange}{TODO} Podsumowanie}
 
-W ostatnim punkcie opisaƒá co zosta≈Ço wykonane, jakiej czƒô≈õci za≈Ço≈ºe≈Ñ nie wykonano i dlaczego. Co mo≈ºna zrobiƒá, by dany projekt poprawiƒá i w jakim kierunku mo≈ºe p√≥j≈õƒá dalszy rozw√≥j tego projektu.
+W ostatnim punkcie opisaÊ co zosta≥o wykonane, jakiej czÍúci za≥oøeÒ nie wykonano i dlaczego. Co moøna zrobiÊ, by dany projekt poprawiÊ i w jakim kierunku moøe pÛjúÊ dalszy rozwÛj tego projektu.
 
 \newpage
 
@@ -625,20 +628,20 @@ W ostatnim punkcie opisaƒá co zosta≈Ço wykonane, jakiej czƒô≈õci za≈Ço≈ºe≈Ñ nie 
 
 \newpage
 
-\section{\textcolor{red}{WIP} Za≈ÇƒÖczniki}
+\section{\textcolor{red}{WIP} Za≥πczniki}
 
-Na prezentacjƒô (obronƒô) projektu trzeba przygotowaƒá prezentacjƒô w PowerPoint lub Prezi trwajƒÖcƒÖ ok 12-15 minut Zwykle jest to ok. 20 slajd√≥w. Te slajdy muszƒÖ zawieraƒá tytu≈Ç projektu, autora, prowadzƒÖcego. Nastƒôpnie plan prezentacji, najwa≈ºniejsze osiƒÖgniƒôcia , podsumowanie. Slajdy muszƒÖ byƒá czytelne, nale≈ºy umieszczaƒá rysunki i schematy, tak≈ºe nie powinno siƒô na nich umieszczaƒá zbyt du≈ºo tekstu (tekst powinien mieƒá ok. 20-24pkt). W trakcie lub po prezentacji powinno siƒô zademonstrowaƒá wykonany sprzƒôt i oprogramowanie. Mo≈ºna r√≥wnie≈º zaprezentowaƒá w zamian tego film z dzia≈Çania urzƒÖdzenia.
+Na prezentacjÍ (obronÍ) projektu trzeba przygotowaÊ prezentacjÍ w PowerPoint lub Prezi trwajπcπ ok 12-15 minut Zwykle jest to ok. 20 slajdÛw. Te slajdy muszπ zawieraÊ tytu≥ projektu, autora, prowadzπcego. NastÍpnie plan prezentacji, najwaøniejsze osiπgniÍcia , podsumowanie. Slajdy muszπ byÊ czytelne, naleøy umieszczaÊ rysunki i schematy, takøe nie powinno siÍ na nich umieszczaÊ zbyt duøo tekstu (tekst powinien mieÊ ok. 20-24pkt). W trakcie lub po prezentacji powinno siÍ zademonstrowaÊ wykonany sprzÍt i oprogramowanie. Moøna rÛwnieø zaprezentowaÊ w zamian tego film z dzia≥ania urzπdzenia.
 
-Przyk≈Çadowa zawarto≈õƒá za≈ÇƒÖcznika:
-Kody ≈∫r√≥d≈Çowe (z komentarzami!!!) na CD spakowane.
-Wys≈Çane mailem zawarto≈õƒá projektu do prowadzƒÖcego.
+Przyk≥adowa zawartoúÊ za≥πcznika:
+Kody ürÛd≥owe (z komentarzami!!!) na CD spakowane.
+Wys≥ane mailem zawartoúÊ projektu do prowadzπcego.
 Prezentacja.
-Wszystkie opisy uk≈Çad√≥w, program√≥w, narzƒôdzi stosowanych w projekcie itp.
+Wszystkie opisy uk≥adÛw, programÛw, narzÍdzi stosowanych w projekcie itp.
 
 \newpage
 
-\renewcommand*{\lstlistingname}{Za≈ÇƒÖcznik}
-\renewcommand*{\figurename}{Za≈ÇƒÖcznik}
+\renewcommand*{\lstlistingname}{Za≥πcznik}
+\renewcommand*{\figurename}{Za≥πcznik}
 \setcounter{figure}{1}
 
 \lstinputlisting[label={KodMikrokontrolera},caption={Kod mikrokontrolera}]{../src/main.cpp}
