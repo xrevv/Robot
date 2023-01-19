@@ -512,6 +512,8 @@ Komunikacja aplikacji mobilnej z mikrokontrolerem odbywa się poprzez protokół
 
 Kod sterujący działaniem mikrokontrolera powstał w \href{https://code.visualstudio.com}{\underline{Visual Studio Code}}\footnote{Darmowy edytor kodu źródłowego z kolorowaniem składni dla wielu języków, stworzony przez Microsoft o otwartym kodzie źródłowym} przy pomocy \href{https://platformio.org}{\underline{PlatformIO}}\footnote{\enquote{A user-friendly and extensible integrated development environment with a set of professional development instruments, providing modern and powerful features to speed up yet simplify the creation and delivery of embedded products}\cite{platformio}}. Schemat blokowy kodu przedstawiono na rysunku \ref{SBCode}\footnote{Schemat wykonano w programie \href{https://www.lucidchart.com}{\underline{Lucidchart}}}. Całość kodu źródłowego znajduje się w Załączniku \ref{KodMikrokontrolera}.
 
+\vspace{1cm}
+
 \begin{figure}[h!]
     \begin{center}
         \includesvg[width=0.7\textwidth]{img/schematkodu.svg}
@@ -519,6 +521,33 @@ Kod sterujący działaniem mikrokontrolera powstał w \href{https://code.visuals
     \caption{Schemat blokowy kodu}
     \label{SBCode}
 \end{figure}
+
+W celu ograniczenia prędkości poruszania się każdego z serwomechanizmów zastosowano funkcję przedstawioną na Rysunku \ref{void_moveServo}. Wykonuje ona swoje zadanie poprzez iteracyjną inkrementację lub dekrementację wartości pozycji.
+
+\vspace{1cm}
+
+\begin{figure}[h!]
+    \lstinputlisting[firstline=152,lastline=182]{../src/main.cpp}
+    \caption{void moveServo()}
+    \label{void_moveServo}
+\end{figure}
+
+\newpage
+
+Innym ciekawym rozwiązaniem jest realizacja odtwarzania zapisanej sekwencji ruchów, które pokazano na Rysunku \ref{casePlay}. Rozwiązanie polega na iteracyjnej inkrementacji bądź dekrementacji wartości pozycji dla wszystkich serwomechanizmów po kolei.
+
+\begin{figure}[h!]
+    \lstinputlisting[firstline=109,lastline=142]{../src/main.cpp}
+    \caption{case 2: - Play}
+    \label{casePlay}
+\end{figure}
+
+Nieocenioną pomocą okazały się biblioteki:
+\begin{itemize}
+    \item Arduino.h \cite{Arduino_lib}
+    \item SoftwareSerial.h \cite{EspSoftwareSerial}
+    \item Servo.h \cite{EspServo}
+\end{itemize}
 
 \subsection{\textcolor{orange}{TODO} Problemy w trakcie tworzenia sprzętu i aplikacji}
 
