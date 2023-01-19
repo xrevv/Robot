@@ -545,18 +545,37 @@ W celu ograniczenia prędkości poruszania się każdego z serwomechanizmów zas
 
 Innym ciekawym rozwiązaniem jest realizacja odtwarzania zapisanej sekwencji ruchów, które pokazano na Rysunku \ref{casePlay}. Rozwiązanie polega na iteracyjnej inkrementacji bądź dekrementacji wartości pozycji dla wszystkich serwomechanizmów po kolei.
 
+\vspace{1cm}
+
 \begin{figure}[h!]
     \lstinputlisting[firstline=109,lastline=142]{../src/main.cpp}
     \caption{case 2: - Play}
     \label{casePlay}
 \end{figure}
 
+\newpage
+
 Nieocenioną pomocą okazały się biblioteki:
+
 \begin{itemize}
     \item Arduino.h \cite{Arduino_lib}
     \item SoftwareSerial.h \cite{EspSoftwareSerial}
     \item Servo.h \cite{EspServo}
 \end{itemize}
+
+\vspace{3cm}
+
+Środowisko Visual Studio Code (Rysunek \ref{vscodepic}) pozwoliło nam na sprawną pracę.
+
+\begin{figure}[h!]
+    \begin{center}
+        \includegraphics[width=\textwidth]{img/vscode.png}
+    \end{center}
+    \caption{Środowisko Visual Studio Code}
+    \label{vscodepic}
+\end{figure}
+
+\newpage
 
 \subsection{\textcolor{orange}{TODO} Problemy w trakcie tworzenia sprzętu i aplikacji}
 
