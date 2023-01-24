@@ -5,6 +5,8 @@
 Projekt realizowany w ramach przedmiotu Systemy Mikroprocesorowe na studiach inżynierskich.
 Ramię robota sterowane płytką Wemos D1 mini poprzez aplikację stworzoną w MIT App Inventor (komunikacja Bluetooth).
 
+![Robot](./doc/img/Robot.png)
+
 <!-- ACKNOWLEDGMENTS -->
 ## Podziękowania
 * [How To Mechatronics](https://www.youtube.com/watch?v=_B3gWd3A_SI)
